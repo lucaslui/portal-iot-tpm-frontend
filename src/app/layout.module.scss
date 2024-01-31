@@ -11,4 +11,8 @@
     background-color: $background-secondary-color;
 
     padding: 24px;
+
+    overflow-y: scroll;
+
+    max-height: 705px;
 }

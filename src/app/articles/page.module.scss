@@ -2,16 +2,24 @@
 @import '../../styles/spaces.scss';
 
 .articles_grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 320px));
-    grid-gap: 32px;
-    // display: flex;
-    // flex-direction: row;
-    // justify-content: flex-start;
-    // flex-wrap: wrap;
+    // display: grid;
+    // grid-template-columns: repeat(auto-fit, minmax(260px, 320px));
+    // grid-gap: 32px;
 
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    gap: 32px;
+
+    flex-wrap: wrap;
+
+    width: 100%;
+
+    padding: 16px 48px;
+    
     a {
-        text-decoration: none;
         color: $primary-color;
     }
 }

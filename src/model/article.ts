@@ -6,6 +6,6 @@ export type ArticleModel = {
     content: string;
     imageUrl: string;
     userId: string;
-    categoryId: string;
-    createdAt: string;
+    categories: string[];
+    createdAt: Date;
 }

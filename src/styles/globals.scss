@@ -44,3 +44,20 @@ a {
         text-shadow: rgb(205, 217, 229) 0px 0px 1rem;
     }
 }
+
+::-webkit-scrollbar {
+    width: 0.8rem;
+}
+
+::-webkit-scrollbar-thumb {
+    background: $background-color;
+    transition: all 0.5s ease-in-out;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: $background-ternary-color;
+}
+
+::-webkit-scrollbar-track {
+    background: $background-button-color;
+}
