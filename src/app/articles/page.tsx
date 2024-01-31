@@ -6,9 +6,9 @@ import ArticleCard from '@/components/article-card/article-card'
 import { ArticleModel } from '@/model/article'
 
 const loadArticles = async (): Promise<ArticleModel[]> => {
-    const result = await fetch(`http://localhost:5050/api/articles`)
-    const data = await result.json()
-    return data
+    // const result = await fetch(`http://localhost:5050/api/articles`)
+    // const data = await result.json()
+    // return data
 }
 
 const Articles: React.FC = async () => {
