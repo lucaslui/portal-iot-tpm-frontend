@@ -1,6 +1,6 @@
 @import '../styles/colors.scss';
 
-.control_painel {
+.home {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
@@ -9,6 +9,8 @@
     flex-grow: 1;
 
     margin: 20px;
+
+    z-index: 10;
 
     background-color: $background-secondary-color;
 
@@ -19,7 +21,7 @@
         align-items: stretch;
 
         flex-grow: 1;
-        
+
         height: 618px;
 
         .filter_header {
@@ -32,7 +34,7 @@
 
             border-top-right-radius: 10px;
             border-top-left-radius: 10px;
-        
+
             background-color: $background-button-color;
         }
     }

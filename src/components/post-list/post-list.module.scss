@@ -29,6 +29,8 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
+            
+            cursor: pointer;
 
             width: 200px;
             height: 100px;
@@ -42,15 +44,21 @@
             background-color: $background-color;
 
             .post_item_title {
-                font-size: 1.5rem;
+                font-size: 1rem;
                 font-weight: 600;
                 color: #ccc;
+
             }
 
             .post_item_description {
-                font-size: 1rem;
+                font-size: 0.9rem;
                 font-weight: 400;
                 color: #ccc;
+            }
+
+            &:hover {
+                background-color: $background-secondary-color;
+                box-shadow: rgba(194, 193, 193, 0.24) 0px 3px 8px;
             }
         }
     }

@@ -180,7 +180,7 @@ const ContronPanel: React.FC = () => {
     const posts = initialPosts.filter(filterPostsByType).filter(filterPostsByCategory).filter(filterPostsBySearch)
 
     return (
-        <div className={styles.control_painel}>
+        <div className={styles.home}>
             <CategoryFilter categories={categories} setCategories={setCategories} />
             <div className={styles.results}>
                 <div className={styles.filter_header}>

@@ -27,11 +27,6 @@ const navItemsRight = [
         url: '/projects',
         icon: 'fas fa-chart-bar'
     },
-    {
-        title: 'About',
-        url: '/about',
-        icon: 'fas fa-chart-bar'
-    }
 ]
 
 const NavBar: React.FC = () => {
@@ -42,7 +37,7 @@ const NavBar: React.FC = () => {
             <div className='left-side'>
                 <Link href='/' className={pathname === '/' ? styles.active : ''}>
                     <i className="fas fa-home" />
-                    <span> Control Panel </span>
+                    <span> Home </span>
                 </Link>
             </div>
             <div className='right-side'>

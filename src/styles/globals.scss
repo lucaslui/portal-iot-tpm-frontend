@@ -1,10 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&display=swap');
+
 @import './colors.scss';
 
 * {
-    font-family: "Poppins", sans-serif;
-    padding: 0;
-    margin: 0;
     box-sizing: border-box;
+    font-family: 'Orbitron', sans-serif;
+    letter-spacing: .1rem;
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: none;
+    list-style: none;
+    text-decoration: none;
 }
 
 body {
@@ -17,4 +24,23 @@ body {
     color: $primary-color;
 
     min-height: 100vh;
+
+    z-index: 1;
+}
+
+p {
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    margin: 1rem 0 3rem;
+}
+
+a {
+    color: $primary-color;
+    text-decoration: none;
+    transition: color 0.3s;
+
+    &:hover {
+        color: $secondary-color;
+        text-shadow: rgb(205, 217, 229) 0px 0px 1rem;
+    }
 }

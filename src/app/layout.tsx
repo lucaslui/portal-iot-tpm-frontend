@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { Roboto } from 'next/font/google'
+import { Orbitron } from 'next/font/google'
 
 import '../styles/globals.scss'
 import styles from './layout.module.scss'
@@ -7,15 +7,16 @@ import styles from './layout.module.scss'
 import Header from '@/components/header/header'
 import Footer from '@/components/footer/footer'
 import NavBar from '@/components/navbar/navbar'
+import ParticlesBackground from '@/components/background/particles-background'
 
-const roboto = Roboto({
+const roboto = Orbitron({
     subsets: ['latin'],
-    style: ["normal", "italic"],
+    style: ["normal"],
     weight: ['400', '500', '700', '900'],
 })
 
 export const metadata: Metadata = {
-    title: 'Full Stack IoT Tutorials',
+    title: 'Internet of Things K-Library',
     description: 'Free web tutorials about Internet of Things',
     authors: [{ name: "Lucas Lui Motta", url: "https://github.com/lucaslui" }],
     keywords: 'Internet of Things',
@@ -28,6 +29,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
                 <link href="https://use.fontawesome.com/releases/v5.10.2/css/all.css" rel="stylesheet" />
             </head>
             <body className={roboto.className}>
+                <ParticlesBackground/>
                 <Header />
                 <NavBar />
                 <main className={styles.main}>
