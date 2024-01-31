@@ -2,8 +2,6 @@
 
 import React, { useCallback } from 'react';
 
-import styles from './particles-background.module.scss'
-
 import Particles from "react-tsparticles"
 import { loadSlim } from "tsparticles-slim";
 import { Engine, IOptions } from 'tsparticles-engine';
@@ -17,7 +15,7 @@ type RecursivePartial<T> = {
 };
 
 const ParticlesBackground: React.FC = () => {
-    const particlesInit = useCallback(async (engine: any) => {
+    const particlesInit = useCallback(async (engine: Engine) => {
         await loadSlim(engine);
     }, []);
 
