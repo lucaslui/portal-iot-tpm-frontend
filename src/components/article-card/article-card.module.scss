@@ -13,7 +13,7 @@
 
     border: 1px solid $disabled-color;
     border-radius: 10px;
-    
+
     overflow: hidden;
 
     font-size: 0.8rem;
@@ -24,8 +24,8 @@
     }
 
     img {
+        height: 170px;
         width: 100%;
-        height: auto;
     }
 
     .article_body {
@@ -33,7 +33,7 @@
         flex-direction: column;
         justify-content: flex-start;
         align-items: stretch;
-        
+
         flex-grow: 1;
 
         color: $primary-color;

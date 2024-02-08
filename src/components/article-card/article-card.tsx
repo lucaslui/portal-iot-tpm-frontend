@@ -5,8 +5,6 @@ import styles from './article-card.module.scss'
 
 import { getDateFormat } from '@/utils/date'
 
-import ImageTest from '../../assets/imgs/image-test.jpg'
-
 type Props = {
   title: string
   description: string
@@ -20,7 +18,7 @@ type Props = {
 const ArticleCard: React.FC<Props> = (props: Props) => {
   return (
     <div className={styles.article_card}>
-      <Image src={ImageTest} alt='Imagem do Artigo' width={100} height={100}/>
+      <Image src={props.imageUrl} alt='Imagem do Artigo' width={100} height={100}/>
       <div className={styles.article_body}>
         <h4>{props.title}</h4>
         <span>{props.description}</span>
