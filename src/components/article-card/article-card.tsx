@@ -18,7 +18,7 @@ type Props = {
 const ArticleCard: React.FC<Props> = (props: Props) => {
     return (
         <div className={styles.article_card}>
-            <Image src={props.imageUrl} alt='Imagem do Artigo' width={240} height={172} objectFit='cover' />
+            <Image src={props.imageUrl} alt='Imagem do Artigo' width={240} height={172} />
             <div className={styles.article_body}>
                 <h4>{props.title}</h4>
                 <span>{props.description}</span>

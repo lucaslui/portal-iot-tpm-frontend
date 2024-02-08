@@ -9,7 +9,7 @@ import { ArticleModel } from '@/model/article'
 const loadArticles = async (): Promise<ArticleModel[]> => {
     const result = await fetch(`${process.env.API_URL}/api/articles`, { cache: 'no-store' })
     const data = await result.json()
-    return data
+    return data.articles
 }
 
 const Articles: React.FC = async () => {
@@ -21,7 +21,7 @@ const Articles: React.FC = async () => {
             {
                 articles.map((article: any) => {
                     return (
-                        <Link key={article.id} href={`/configuration/article?articleId=${article.id}`}>
+                        <Link key={article.id} href={`/articles/${article.id}`}>
                             <ArticleCard
                                 title={article.title}
                                 description={article.description}

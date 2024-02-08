@@ -2,10 +2,11 @@ export type ArticleModel = {
     id: string;
     title: string;
     description: string;
-    type?: string;
+    type: 'article' | 'new' | 'tutorial' | 'project';
     content: string;
     imageUrl: string;
     userId: string;
-    categories: string[];
+    categoryIds: string[];
+    updatedAt: Date;
     createdAt: Date;
 }
