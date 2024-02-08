@@ -2,11 +2,12 @@ import React from 'react'
 import Link from 'next/link'
 
 import styles from './page.module.scss'
+
 import ArticleCard from '@/components/article-card/article-card'
 import { ArticleModel } from '@/model/article'
 
 const loadArticles = async (): Promise<ArticleModel[]> => {
-    const result = await fetch(`${process.env.API_URL}/api/articles`)
+    const result = await fetch(`${process.env.API_URL}/api/articles`, { cache: 'no-store' })
     const data = await result.json()
     return data
 }
