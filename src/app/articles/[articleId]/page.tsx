@@ -5,7 +5,7 @@ import parse from 'html-react-parser'
 
 import styles from './page.module.scss'
 
-import { ArticleModel } from '@/model/article'
+import { ArticleModel, ArticleViewModel } from '@/model/article'
 import { getDateFormat } from '@/utils/date'
 
 import userLogo from '../../../assets/imgs/user.svg'
@@ -13,13 +13,14 @@ import articleI18N from '@/i18n/article'
 
 type Props = {
     params: {
-        id: string
+        articleId: string
     }
 }
 
-export async function generateStaticParams() {
-    const data = await fetch(`${process.env.API_URL}/api/articles`).then((res) => res.json())
-    return data.articles.map((article: ArticleModel) => ({ slug: article.id }))
+export async function generateStaticParams(): Promise<{ articleId: string }[]> {
+    const response = await fetch(`${process.env.API_URL}/api/articles`)
+    const data = await response.json()
+    return data.articles.map((article: ArticleModel) => ({ articleId: article.id }))
 }
 
 const montserrat = Montserrat({
@@ -28,32 +29,11 @@ const montserrat = Montserrat({
     weight: ['400', '500', '600', '700', '900'],
 })
 
-type ArticleViewModel = {
-    id: string
-    title: string
-    description: string
-    type: 'article' | 'new' | 'tutorial' | 'project'
-    content: string
-    imageUrl: string
-    user: {
-        id: string
-        name: string
-    }
-    categories: {
-        id: string
-        name: string
-        description: string
-    }[]
-    createdAt: Date
-    updatedAt: Date
-}
-
-const Article: React.FC<Props> = async ({ params }: { params: { id: string } }) => {
+const Article: React.FC<Props> = async ({ params }: { params: { articleId: string } }) => {
 
     const loadArticle = async (): Promise<ArticleViewModel> => {
-        const result = await fetch(`${process.env.API_URL}/api/articles`)
-        const data = await result.json()
-        const article = data.articles.find((article: ArticleViewModel) => article.id === params.id)
+        const response = await fetch(`${process.env.API_URL}/api/articles/${params.articleId}`)
+        const article = await response.json()
         return article
     }
 
