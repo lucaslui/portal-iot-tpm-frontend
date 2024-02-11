@@ -1,0 +1,41 @@
+@import '../styles/colors.scss';
+
+.filter_panel {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: stretch;
+
+    flex-grow: 1;
+
+    margin: 20px;
+
+    z-index: 10;
+
+    background-color: $background-secondary-color;
+
+    .results {
+        display: flex;
+        flex-direction: column;
+        justify-content: stretch;
+        align-items: stretch;
+
+        flex-grow: 1;
+
+        height: 618px;
+
+        .filter_header {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+
+            padding: 12px 24px;
+
+            border-top-right-radius: 10px;
+            border-top-left-radius: 10px;
+
+            background-color: $background-button-color;
+        }
+    }
+}

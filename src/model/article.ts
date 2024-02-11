@@ -1,8 +1,10 @@
+type ArticleType = 'articles' | 'news' | 'tutorials' | 'projects'
+
 export type ArticleModel = {
     id: string;
     title: string;
     description: string;
-    type: 'article' | 'new' | 'tutorial' | 'project';
+    type: ArticleType;
     content: string;
     imageUrl: string;
     userId: string;
@@ -15,7 +17,7 @@ export type ArticleViewModel = {
     id: string
     title: string
     description: string
-    type: 'article' | 'new' | 'tutorial' | 'project'
+    type: ArticleType
     content: string
     imageUrl: string
     user: {

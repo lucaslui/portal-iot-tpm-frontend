@@ -33,13 +33,12 @@ p {
 
 a {
     color: $primary-color;
-    text-decoration: none;
     transition: color 0.3s;
 
-    &:hover {
-        color: $secondary-color;
-        text-shadow: rgb(205, 217, 229) 0px 0px 1rem;
-    }
+    // &:hover {
+    //     color: $secondary-color;
+    //     text-shadow: rgb(205, 217, 229) 0px 0px 1rem;
+    // }
 }
 
 ::-webkit-scrollbar {

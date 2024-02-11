@@ -6,10 +6,10 @@ import parse from 'html-react-parser'
 import styles from './page.module.scss'
 
 import { ArticleModel, ArticleViewModel } from '@/model/article'
-import { getDateFormat } from '@/utils/date'
 
-import userLogo from '../../../assets/imgs/user.svg'
 import articleI18N from '@/i18n/article'
+import ProfileCard from '@/components/profile-card/profile-card'
+import DateCard from '@/components/date-card/date-card'
 
 type Props = {
     params: {
@@ -52,28 +52,13 @@ const Article: React.FC<Props> = async ({ params }: { params: { articleId: strin
                         <li key={index}> {category.name} </li>
                     ))}
                 </ul>
-                <Image className={styles.cover} src={article.imageUrl} alt='Imagem do Artigo' width={720} height={405} />
+                <div className={styles.image_container}>
+                    <Image src={article.imageUrl} fill alt='Imagem do Artigo' />
+                </div>
                 <hr />
-                <div className={styles.footer}>
-                    <section className={styles.profile}>
-                        <div className='image'>
-                            <Image src={userLogo} alt='Imagem do Perfil' width={30} height={30} />
-                        </div>
-                        <div className={styles.info}>
-                            <h3> {article.user.name} </h3>
-                            <p> {"Desenvolvedor"} </p>
-                        </div>
-                    </section>
-                    <section className={styles.date}>
-                        <div className={styles.group}>
-                            <label> Atualizado em </label>
-                            <time> {getDateFormat(article.updatedAt)} </time>
-                        </div>
-                        <div className={styles.group}>
-                            <label> Publicado em </label>
-                            <time> {getDateFormat(article.createdAt)} </time>
-                        </div>
-                    </section>
+                <div className={styles.bottom}>
+                    <ProfileCard article={article} />
+                    <DateCard article={article} />
                 </div>
             </header>
             <main className={`${styles.content} ${montserrat.className}`}>

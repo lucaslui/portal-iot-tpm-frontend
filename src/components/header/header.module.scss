@@ -1,4 +1,5 @@
 @import '../../styles/colors.scss';
+@import '../../styles/spaces.scss';
 
 .header {
   display: flex;
@@ -24,7 +25,7 @@
       width: 56px;
     }
 
-    div {
+    main {
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -47,6 +48,29 @@
         font-size: 0.9rem;
         font-weight: 200;
         color: $secondary-color;
+      }
+    }
+  }
+}
+
+@media #{$media-query-mobile} {
+  .header {
+    padding: 16px 24px;
+
+    .logo {
+      img {
+        height: 48px;
+        width: 48px;
+      }
+
+      main {
+        h1 {
+          font-size: 0.9rem;
+        }
+
+        h2 {
+          display: none;
+        }
       }
     }
   }

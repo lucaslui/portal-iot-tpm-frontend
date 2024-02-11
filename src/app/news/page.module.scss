@@ -1,8 +1,21 @@
+@import '../../styles/colors.scss';
+@import '../../styles/spaces.scss';
+
 .news {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    gap: 32px;
+
+    flex-wrap: wrap;
+
+    width: 100%;
+
+    padding: 16px 48px;
     
-    padding: 20px;
+    a {
+        color: $primary-color;
+    }
 }

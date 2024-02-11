@@ -1,0 +1,45 @@
+@import '../../styles/colors.scss';
+@import '../../styles/spaces.scss';
+
+
+.date_card {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+
+    .group {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+
+        gap: 8px;
+
+        label {
+            font-size: 0.7rem;
+            font-weight: 500;
+        }
+
+        time {
+            font-size: 0.7rem;
+            font-weight: 700;
+        }
+    }
+}
+
+@media #{$media-query-mobile} {
+    .date_card {
+        .group {
+            label {
+                font-size: 0.6rem;
+                font-weight: 500;
+            }
+
+            time {
+                font-size: 0.6rem;
+                font-weight: 700;
+            }
+        }
+    }
+}

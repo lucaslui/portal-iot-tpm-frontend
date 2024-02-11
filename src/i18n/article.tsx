@@ -1,9 +1,9 @@
 const articleI18N = {
     pt: {
-        "article": "artigo",
-        "new": "noticia",
-        "tutorial": "tutorial",
-        "project": "projeto",
+        "articles": "artigo",
+        "news": "noticia",
+        "tutorials": "tutorial",
+        "projects": "projeto",
     },
     en: {
         "article": "article",

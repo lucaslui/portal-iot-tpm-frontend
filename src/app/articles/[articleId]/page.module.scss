@@ -9,7 +9,7 @@
 
     gap: 40px;
 
-    max-width: 720px;
+    max-width: $site-content-width;
 
     header {
         display: flex;
@@ -17,11 +17,7 @@
         justify-content: flex-start;
         align-items: stretch;
 
-        .cover {
-            border-radius: 10px;
-            margin-top: $outside-gap;
-            margin-bottom: $outside-gap;
-        }
+        height: 60vh;
 
         .top {
             display: flex;
@@ -31,10 +27,11 @@
 
             gap: 16px;
 
+            margin-bottom: $outside-gap;
+
             h1 {
                 font-size: 1.3rem;
                 font-weight: 600;
-                margin-bottom: $outside-gap;
                 margin-left: 4px;
             }
 
@@ -48,7 +45,6 @@
                 margin-right: 5px;
             }
         }
-
 
         h2 {
             font-size: 0.9rem;
@@ -77,71 +73,33 @@
             }
         }
 
+        .image_container {
+            position: relative;
+
+            flex: 1;
+
+            margin-top: $outside-gap;
+            margin-bottom: $outside-gap;
+
+            img {
+                width: 100%;
+                border-radius: 10px;
+            }
+        }
+
+        .bottom {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+
         hr {
             border: 0;
             height: 1px;
             background-image: linear-gradient(to right, rgba(240, 240, 240, 0), rgba(240, 240, 240, 0.75), rgba(240, 240, 240, 0));
             margin-bottom: $outside-gap;
         }
-
-        .footer {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            align-items: center;
-
-            .profile {
-                display: flex;
-                flex-direction: row;
-                justify-content: flex-start;
-                align-items: center;
-
-                gap: 16px;
-
-                margin-left: 4px;
-
-                image {
-                    img {
-                        border-radius: 50%;
-                        margin: 0;
-                    }
-                }
-
-                .info {
-                    font-size: 0.7rem;
-
-                    p {
-                        margin: 0;
-                    }
-                }
-            }
-
-            .date {
-                display: flex;
-                flex-direction: column;
-                justify-content: flex-start;
-                align-items: flex-end;
-
-                font-size: 0.7rem;
-                font-weight: 500;
-
-                .group {
-                    display: flex;
-                    flex-direction: row;
-                    justify-content: flex-start;
-                    align-items: center;
-
-                    gap: 8px;
-
-                    time {
-                        font-size: 0.7rem;
-                        font-weight: 700;
-
-                    }
-                }
-            }
-        }
-
     }
 
     main {
@@ -177,5 +135,57 @@
             }
         }
     }
+}
 
+@media #{$media-query-mobile} {
+    .article {
+        header {
+            height: 40vh;
+
+            .top {
+                h1 {
+                    font-size: 1.1rem;
+                }
+
+                span {
+                    font-size: 0.7rem;
+                }
+            }
+
+            h2 {
+                font-size: 0.8rem;
+            }
+
+            .image_container {
+                margin-top: $inside-gap;
+                margin-bottom: $inside-gap;
+            }
+
+            .bottom {
+                .date {
+                    font-size: 0.7rem;
+
+                    .group {
+                        time {
+                            font-size: 0.7rem;
+                        }
+                    }
+                }
+            }
+        }
+
+        main {
+            .content {
+                p {
+                    font-size: 0.9rem;
+                }
+
+                ul {
+                    li {
+                        font-size: 0.9rem;
+                    }
+                }
+            }
+        }
+    }
 }
