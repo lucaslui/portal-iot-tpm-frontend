@@ -9,7 +9,7 @@
 
     gap: 32px;
 
-    max-width: 1080px;
+    max-width: $site-content-width;
 
     .feed {
         display: flex;

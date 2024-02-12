@@ -1,4 +1,4 @@
-type ArticleType = 'articles' | 'news' | 'tutorials' | 'projects'
+type ArticleType = 'concepts' | 'news' | 'tutorials' | 'projects'
 
 export type ArticleModel = {
     id: string;

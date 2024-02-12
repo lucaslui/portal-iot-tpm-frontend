@@ -1,8 +1,35 @@
-.news {
+@import '../../styles/colors.scss';
+@import '../../styles/spaces.scss';
+
+.about {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    
+    align-items: flex-start;
+    justify-content: stretch;
+
+    gap: $inside-gap;
+
     padding: 20px;
+
+    max-width: $site-content-width;
+
+    section {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: stretch;
+
+        gap: $inside-gap;
+
+        .profile-badge {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background-color: $primary-color;
+
+            .profile-badge--dark {
+                background-color: $background-color !important;
+            }
+        }
+    }
 }

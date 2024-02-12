@@ -6,13 +6,20 @@ import styles from './page.module.scss'
 import ArticleCard from '@/components/article-card/article-card'
 import { ArticleModel } from '@/model/article'
 
-const loadArticlePosts = async (): Promise<ArticleModel[]> => {
-    const result = await fetch(`${process.env.API_URL}/api/articles?type=articles`)
-    const data = await result.json()
-    return data.articles
+
+type Props = {
+    params: {
+        articleType: string
+    }
 }
 
-const Articles: React.FC = async () => {
+const Articles: React.FC<Props> = async ({ params }: { params: { articleType: string } }) => {
+
+    const loadArticlePosts = async (): Promise<ArticleModel[]> => {
+        const result = await fetch(`${process.env.API_URL}/api/articles?type=${params.articleType}`)
+        const data = await result.json()
+        return data.articles
+    }
 
     const articles = await loadArticlePosts()
 
@@ -21,7 +28,7 @@ const Articles: React.FC = async () => {
             {
                 articles.map((article: any) => {
                     return (
-                        <Link key={article.id} href={`/articles/${article.id}`}>
+                        <Link key={article.id} href={`/${params.articleType}/${article.id}`}>
                             <ArticleCard
                                 title={article.title}
                                 description={article.description}
