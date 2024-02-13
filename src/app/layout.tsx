@@ -9,6 +9,8 @@ import Footer from '@/components/footer/footer'
 import NavBar from '@/components/navbar/navbar'
 import ParticlesBackground from '@/components/background/particles-background'
 
+import Logo from '@/assets/imgs/logo.svg'
+
 const roboto = Orbitron({
     subsets: ['latin'],
     style: ["normal"],
@@ -19,7 +21,7 @@ export const metadata: Metadata = {
     title: 'Internet of Things P-Library',
     description: 'Free web tutorials about Internet of Things',
     authors: [{ name: "Lucas Lui Motta", url: "https://github.com/lucaslui" }],
-    keywords: 'Internet of Things',
+    keywords: 'Internet of Things'
 }
 
 const RootLayout = ({ children }: { children: React.ReactNode }) => {
@@ -27,9 +29,10 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
         <html lang="en">
             <head>
                 <link href="https://use.fontawesome.com/releases/v5.10.2/css/all.css" rel="stylesheet" />
+                <link rel="icon" href="/favicon.svg" sizes="any" />
             </head>
             <body className={roboto.className}>
-                <ParticlesBackground/>
+                <ParticlesBackground />
                 <Header />
                 <NavBar />
                 <main className={styles.main}>
