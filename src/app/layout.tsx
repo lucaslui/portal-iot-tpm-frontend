@@ -9,8 +9,6 @@ import Footer from '@/components/footer/footer'
 import NavBar from '@/components/navbar/navbar'
 import ParticlesBackground from '@/components/background/particles-background'
 
-import Logo from '@/assets/imgs/logo.svg'
-
 const roboto = Orbitron({
     subsets: ['latin'],
     style: ["normal"],
