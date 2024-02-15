@@ -51,16 +51,25 @@
             }
         }
     }
+
+    .about {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+
+        gap: 8px;
+    }
 }
 
 @media #{$media-query-mobile} {
     .header {
-        padding: 16px 24px;
+        padding: 16px 16px;
 
         .logo {
             img {
-                height: 48px;
-                width: 48px;
+                height: 42px;
+                width: 42px;
             }
 
             main {
@@ -72,6 +81,15 @@
                     display: none;
                 }
             }
+        }
+
+        .about {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            font-size: 0.8rem;
         }
     }
 }
