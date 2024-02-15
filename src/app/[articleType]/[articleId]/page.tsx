@@ -17,10 +17,12 @@ type Props = {
     }
 }
 
-export async function generateStaticParams(): Promise<{ articleId: string }[]> {
+export async function generateStaticParams({ params }: any): Promise<{ articleId: string }[]> {
     const response = await fetch(`${process.env.API_URL}/api/articles`)
     const data = await response.json()
-    return data.articles.map((article: ArticleModel) => ({ articleId: article.id }))
+    return data.articles
+        .filter((article: ArticleModel) => article.type === params.articleType)
+        .map((article: ArticleModel) => ({ articleId: article.id }))
 }
 
 const montserrat = Montserrat({
@@ -29,15 +31,16 @@ const montserrat = Montserrat({
     weight: ['400', '500', '600', '700', '900'],
 })
 
+
+const loadArticleById = async (articleId: string): Promise<ArticleViewModel> => {
+    const response = await fetch(`${process.env.API_URL}/api/articles/${articleId}`)
+    const article = await response.json()
+    return article
+}
+
 const Article: React.FC<Props> = async ({ params }: { params: { articleId: string } }) => {
 
-    const loadArticle = async (): Promise<ArticleViewModel> => {
-        const response = await fetch(`${process.env.API_URL}/api/articles/${params.articleId}`)
-        const article = await response.json()
-        return article
-    }
-
-    const article = await loadArticle()
+    const article = await loadArticleById(params.articleId)
 
     return (
         <div className={styles.article}>
@@ -61,6 +64,7 @@ const Article: React.FC<Props> = async ({ params }: { params: { articleId: strin
                     <DateCard article={article} />
                 </div>
             </header>
+
             <main className={`${styles.content} ${montserrat.className}`}>
                 {parse(article.content)}
             </main>
