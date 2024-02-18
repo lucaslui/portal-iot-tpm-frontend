@@ -7,7 +7,7 @@
     justify-content: flex-start;
     align-items: stretch;
 
-    gap: 40px;
+    gap: 36px;
 
     max-width: $site-content-width;
 
@@ -17,7 +17,7 @@
         justify-content: flex-start;
         align-items: stretch;
 
-        height: 60vh;
+        height: 75vh;
 
         .top {
             display: flex;
@@ -93,13 +93,12 @@
             justify-content: space-between;
             align-items: center;
         }
+    }
 
-        hr {
-            border: 0;
-            height: 1px;
-            background-image: linear-gradient(to right, rgba(240, 240, 240, 0), rgba(240, 240, 240, 0.75), rgba(240, 240, 240, 0));
-            margin-bottom: $outside-gap;
-        }
+    hr {
+        border: 0;
+        height: 1px;
+        background-image: linear-gradient(to right, rgba(240, 240, 240, 0), rgba(240, 240, 240, 0.75), rgba(240, 240, 240, 0));
     }
 
     main {
@@ -110,30 +109,37 @@
 
         margin-bottom: 40px;
 
-        .content {
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
-            align-items: stretch;
+        p {
+            font-size: 1rem;
+            font-weight: 400;
+        }
 
-            p {
+        img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        ul {
+            list-style-type: none;
+
+            li {
                 font-size: 1rem;
                 font-weight: 400;
-            }
+                margin-bottom: 8px;
+                position: relative;
+                padding-left: 20px;
+                line-height: 1.5;
 
-            ul {
-                display: flex;
-                flex-direction: column;
-                justify-content: flex-start;
-                align-items: stretch;
-
-                li {
-                    font-size: 1rem;
-                    font-weight: 400;
-                    margin-bottom: $inside-gap;
+                &::before {
+                    content: "•";
+                    position: absolute;
+                    left: 0;
+                    color: $primary-color;
                 }
             }
         }
+
+
     }
 }
 
@@ -178,12 +184,6 @@
             .content {
                 p {
                     font-size: 0.9rem;
-                }
-
-                ul {
-                    li {
-                        font-size: 0.9rem;
-                    }
                 }
             }
         }

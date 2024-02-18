@@ -75,6 +75,14 @@
             main {
                 h1 {
                     font-size: 0.9rem;
+
+                    strong {
+                        display: none;
+                    }
+
+                    .abbreviate {
+                        display: inline-block;
+                    }
                 }
 
                 h2 {

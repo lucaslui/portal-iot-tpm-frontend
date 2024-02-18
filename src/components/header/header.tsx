@@ -13,7 +13,7 @@ const Header: React.FC = () => {
             <Link href='/' className={styles.logo}>
                 <Image src={LogoImage} alt="logo" />
                 <main>
-                    <h1> &lt; <strong> Internet of Things P-Library </strong>/&gt; </h1>
+                    <h1> &lt; <strong>Internet of Things P-Library</strong> <strong className={styles.abbreviate}>IoT P-Library</strong>/&gt; </h1>
                     <h2>
                         Aiming to disseminate knowledge about the Internet of Things in a simple, practical and objective way
                     </h2>

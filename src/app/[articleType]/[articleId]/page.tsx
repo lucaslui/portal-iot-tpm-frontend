@@ -1,6 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
-import { Montserrat } from 'next/font/google'
+import { Montserrat, Poppins } from 'next/font/google'
 import parse from 'html-react-parser'
 
 import styles from './page.module.scss'
@@ -31,9 +31,18 @@ const montserrat = Montserrat({
     weight: ['400', '500', '600', '700', '900'],
 })
 
+const poppins = Poppins({
+    subsets: ['latin'],
+    style: ["normal"],
+    weight: ['400', '500', '600', '700', '900'],
+})
 
 const loadArticleById = async (articleId: string): Promise<ArticleViewModel> => {
-    const response = await fetch(`${process.env.API_URL}/api/articles/${articleId}`)
+    const response = await fetch(`${process.env.API_URL}/api/articles/${articleId}`, {
+        next: {
+            revalidate: 10
+        }
+    })
     const article = await response.json()
     return article
 }
@@ -58,14 +67,14 @@ const Article: React.FC<Props> = async ({ params }: { params: { articleId: strin
                 <div className={styles.image_container}>
                     <Image src={article.imageUrl} fill alt='Imagem do Artigo' />
                 </div>
-                <hr />
                 <div className={styles.bottom}>
                     <ProfileCard article={article} />
                     <DateCard article={article} />
                 </div>
-            </header>
 
-            <main className={`${styles.content} ${montserrat.className}`}>
+            </header>
+            <hr />
+            <main className={`${poppins.className}`}>
                 {parse(article.content)}
             </main>
         </div >

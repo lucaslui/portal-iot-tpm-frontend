@@ -25,20 +25,9 @@ body {
     z-index: 1;
 }
 
-p {
-    font-size: 1rem;
-    font-family: 'Poppins', sans-serif;
-    margin: 1rem 0 3rem;
-}
-
 a {
     color: $primary-color;
     transition: color 0.3s;
-
-    // &:hover {
-    //     color: $secondary-color;
-    //     text-shadow: rgb(205, 217, 229) 0px 0px 1rem;
-    // }
 }
 
 ::-webkit-scrollbar {
