@@ -145,8 +145,11 @@
 
 @media #{$media-query-mobile} {
     .article {
+
+        gap: 24px;
+
         header {
-            height: 40vh;
+            height: 52vh;
 
             .top {
                 h1 {
