@@ -1,7 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 import { Montserrat, Poppins } from 'next/font/google'
-import parse from 'html-react-parser'
+import ReactHtmlParser from 'html-react-parser'
 
 import styles from './page.module.scss'
 
@@ -75,7 +75,9 @@ const Article: React.FC<Props> = async ({ params }: { params: { articleId: strin
             </header>
             <hr />
             <main className={`${poppins.className}`}>
-                {parse(article.content)}
+                <div className='ql-editor'>
+                    {ReactHtmlParser(article.content)}
+                </div>
             </main>
         </div >
     )
