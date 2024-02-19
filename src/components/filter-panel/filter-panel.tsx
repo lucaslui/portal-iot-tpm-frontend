@@ -145,11 +145,6 @@ const FilterPanel: React.FC = () => {
     const [types, setTypes] = useState<string[]>([])
     const [search, setSearch] = useState<string>('')
 
-    useEffect(() => {
-        console.log(categories)
-    }, [categories])
-
-
     const filterPostsByCategory = (post: Post) => {
         if (categories.length === 0) {
             return true
