@@ -42,6 +42,10 @@
                 strong {
                     text-shadow: 0 0 1rem $primary-color;
                 }
+
+                .abbreviate {
+                    display: none;
+                }
             }
 
             h2 {
