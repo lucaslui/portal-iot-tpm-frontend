@@ -24,3 +24,11 @@
         margin-top: 20px;
     }
 }
+
+@media #{$media-query-mobile} {
+    .home {
+        .feed {
+            padding: 0 24px;
+        }
+    }
+}

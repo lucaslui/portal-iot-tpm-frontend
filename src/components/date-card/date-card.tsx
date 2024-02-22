@@ -13,12 +13,12 @@ const DateCard: React.FC<Props> = ({ article }: Props) => {
     return (
         <section className={styles.date_card}>
             <div className={styles.group}>
-                <label> Atualizado em </label>
-                <time> {getDateFormat(article.updatedAt)} </time>
+                <label>Atualizado em</label>
+                <time>{getDateFormat(article.updatedAt)}</time>
             </div>
             <div className={styles.group}>
-                <label> Publicado em </label>
-                <time> {getDateFormat(article.createdAt)} </time>
+                <label>Publicado em</label>
+                <time>{getDateFormat(article.createdAt)}</time>
             </div>
         </section>
     )
