@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 import styles from './article-card.module.scss'
 
-import { getDateFormat } from '@/utils/date'
+import { getShortDateFormat } from '@/utils/date'
 import { ArticleViewModel } from '@/model/article'
 
 type Props = {
@@ -27,7 +27,7 @@ const ArticleCard: React.FC<Props> = ({ article }: Props) => {
                 </div>
                 <div>
                     <i className="far fa-calendar-alt" />
-                    <span>{getDateFormat(article.createdAt)}</span>
+                    <span>{getShortDateFormat(article.createdAt)}</span>
                 </div>
             </div>
         </div>

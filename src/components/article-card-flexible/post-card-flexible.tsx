@@ -4,10 +4,10 @@ import Link from 'next/link'
 
 import styles from './post-card-flexible.module.scss'
 
-import { getDateFormat } from '@/utils/date'
 import articleI18N from '@/i18n/article'
 import { ArticleViewModel } from '@/model/article'
 import ProfileCard from '@/components/profile-card/profile-card'
+import DateCard from '@/components/date-card/date-card'
 
 type Props = {
     article: ArticleViewModel
@@ -32,7 +32,7 @@ const PostCardFlexible: React.FC<Props> = async ({ article }: Props) => {
                 </div>
                 <div className={styles.bottom}>
                     <ProfileCard article={article} />
-                    <span> {getDateFormat(article.createdAt)} </span>
+                    <DateCard article={article} />
                 </div>
             </div>
         </Link>

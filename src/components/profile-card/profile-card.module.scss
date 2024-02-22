@@ -37,6 +37,12 @@
             margin: 0;
 
             text-transform: capitalize;
+
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 1;
+            -webkit-box-orient: vertical;
         }
 
         p {
@@ -46,6 +52,12 @@
             margin: 0;
 
             text-transform: capitalize;
+
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 1;
+            -webkit-box-orient: vertical;
         }
     }
 }
@@ -54,22 +66,30 @@
     .profile_card {
         .info {
             h3 {
-                font-size: 0.6rem;
+                font-size: 0.7rem;
                 font-weight: 700;
 
+                width: 140px;
+
                 overflow: hidden;
-                white-space: nowrap;
                 text-overflow: ellipsis;
+                display: -webkit-box;
+                -webkit-line-clamp: 1;
+                -webkit-box-orient: vertical;
 
             }
 
             p {
-                font-size: 0.5rem;
+                font-size: 0.6rem;
                 font-weight: 500;
 
+                width: 140px;
+
                 overflow: hidden;
-                white-space: nowrap;
                 text-overflow: ellipsis;
+                display: -webkit-box;
+                -webkit-line-clamp: 1;
+                -webkit-box-orient: vertical;
             }
         }
     }
