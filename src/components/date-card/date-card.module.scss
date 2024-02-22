@@ -49,22 +49,18 @@
 @media #{$media-query-mobile} {
     .date_card {
         .group {
+            .long_date {
+                display: none;
+            }
+
             .short_date {
                 font-size: 0.6rem;
 
                 display: inline-block;
             }
 
-            .long_date {
-                font-size: 0.7rem;
-
-                display: none;
-            }
-
             time {
-                font-size: 0.7rem;
-
-                font-size: 0.5rem;
+                font-size: 0.6rem;
             }
         }
     }
