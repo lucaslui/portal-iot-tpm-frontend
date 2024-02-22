@@ -4,33 +4,30 @@ import Image from 'next/image'
 import styles from './article-card.module.scss'
 
 import { getDateFormat } from '@/utils/date'
+import { ArticleViewModel } from '@/model/article'
 
 type Props = {
-    title: string
-    description: string
-    content: string
-    imageUrl: string
-    userId: string
-    categoryId: string
-    createdAt: string
+    article: ArticleViewModel
 }
 
-const ArticleCard: React.FC<Props> = (props: Props) => {
+const ArticleCard: React.FC<Props> = ({ article }: Props) => {
     return (
         <div className={styles.article_card}>
-            <Image src={props.imageUrl} alt='Imagem do Artigo' width={240} height={172} />
-            <div className={styles.article_body}>
-                <h4>{props.title}</h4>
-                <span>{props.description}</span>
+            <div className={styles.image_container}>
+                <Image src={article.imageUrl} alt='Imagem do Artigo' fill />
             </div>
-            <div className={styles.article_footer}>
-                <div>
-                    <i className="far fa-calendar-alt" />
-                    <span>{getDateFormat(props.createdAt)}</span>
-                </div>
+            <div className={styles.body}>
+                <h1>{article.title}</h1>
+                <p>{article.description}</p>
+            </div>
+            <div className={styles.footer}>
                 <div>
                     <i className="fas fa-user-edit" />
-                    <span>{'Lucas'}</span>
+                    <span>{article.user?.name}</span>
+                </div>
+                <div>
+                    <i className="far fa-calendar-alt" />
+                    <span>{getDateFormat(article.createdAt)}</span>
                 </div>
             </div>
         </div>

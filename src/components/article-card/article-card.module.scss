@@ -8,22 +8,34 @@
     justify-content: space-between;
     align-items: stretch;
 
-    height: 300px;
-    width: 240px;
+    height: 340px;
+    width: 260px;
 
     border: 1px solid $disabled-color;
     border-radius: 10px;
-
-    overflow: hidden;
-
-    font-size: 0.8rem;
 
     &:hover {
         box-shadow: 0 4px 8px 0 $ternary-color;
         transform: translatey(-4px) !important;
     }
 
-    .article_body {
+    .image_container {
+        position: relative;
+
+        height: 180px;
+        width: 100%;
+
+        img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+    }
+
+    .body {
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
@@ -36,30 +48,62 @@
 
         padding: 12px;
 
-        h4 {
-            margin-bottom: 12px;
+        h1 {
+            font-size: 0.8rem;
+            font-weight: 600;
+
+            margin-bottom: 8px;
         }
 
-        span {
+        p {
             font-size: 0.6rem;
             color: $secondary-color;
+
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
         }
     }
 
-    .article_footer {
+    .footer {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
+
+        gap: 12px;
 
         background-color: $background-color;
         padding: 12px;
         justify-content: space-between;
 
         font-size: 0.7rem;
+
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+
+        div {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+
+            gap: 4px;
+
+            span {
+                width: 90px;
+
+                overflow: hidden;
+                text-overflow: ellipsis;
+
+                display: -webkit-box;
+                -webkit-line-clamp: 1;
+                -webkit-box-orient: vertical;
+            }
+        }
     }
 
-    i {
-        padding-right: 8px;
-    }
+
 }

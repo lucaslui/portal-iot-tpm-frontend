@@ -29,14 +29,7 @@ const Articles: React.FC<Props> = async ({ params }: { params: { articleType: st
                 articles.map((article: any) => {
                     return (
                         <Link key={article.id} href={`/${params.articleType}/${article.id}`}>
-                            <ArticleCard
-                                title={article.title}
-                                description={article.description}
-                                content={article.content}
-                                imageUrl={article.imageUrl}
-                                userId={article.userId}
-                                categoryId={article.categoryId}
-                                createdAt={article.createdAt} />
+                            <ArticleCard article={article} />
                         </Link>
                     )
                 })
