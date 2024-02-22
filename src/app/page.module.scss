@@ -22,45 +22,5 @@
         flex-wrap: wrap;
 
         margin-top: 20px;
-
-        .post {
-            background-color: $background-color;
-            border-radius: 8px;
-
-            h1 {
-                font-size: 1.3rem;
-                font-weight: 600;
-                margin-bottom: $outside-gap;
-                margin-left: 4px;
-            }
-
-            h2 {
-                font-size: 0.9rem;
-                font-weight: 500;
-                margin-bottom: $outside-gap;
-                margin-left: 4px;
-            }
-
-            img {
-                border-top-left-radius: 8px;
-                border-top-right-radius: 8px;
-            }
-
-            .image_container {
-                position: relative;
-            }
-        }
-
-        .post:hover {
-            box-shadow: 0 0 8px 0 $ternary-color;
-        }
-
-        .post_half {
-            flex: 1 1 40%;
-        }
-
-        .post_third {
-            flex: 1 1 300px;
-        }
     }
 }

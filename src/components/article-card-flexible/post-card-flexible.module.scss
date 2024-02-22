@@ -7,15 +7,8 @@
     height: 50vh;
 
     h1 {
-        font-size: 1.3rem;
+        font-size: 1.2rem;
         font-weight: 600;
-        margin-bottom: $outside-gap;
-        margin-left: 4px;
-    }
-
-    h2 {
-        font-size: 0.9rem;
-        font-weight: 500;
         margin-bottom: $outside-gap;
         margin-left: 4px;
     }
@@ -104,6 +97,21 @@
                     margin-right: 5px;
                 }
             }
+
+            p {
+                font-size: 0.9rem;
+                font-weight: 500;
+                margin-bottom: $outside-gap;
+                margin-left: 4px;
+
+                height: 36px;
+
+                overflow: hidden;
+                text-overflow: ellipsis;
+                display: -webkit-box;
+                -webkit-line-clamp: 2;
+                -webkit-box-orient: vertical;
+            }
         }
 
         .bottom {
@@ -142,6 +150,10 @@
     align-items: stretch;
 
     flex: 1 1 100%;
+
+    h1 {
+        font-size: 1.2rem;
+    }
 }
 
 .post_card_full:nth-child(6n+2),
@@ -153,6 +165,10 @@
     align-items: stretch;
 
     flex: 1 1 calc(33% - 32px);
+
+    h1 {
+        font-size: 1rem;
+    }
 
     .image_container {
         img {
@@ -184,6 +200,10 @@
 
     border-bottom-left-radius: 8px;
     border-bottom-right-radius: 8px;
+
+    h1 {
+        font-size: 1rem;
+    }
 
     .image_container {
         img {
