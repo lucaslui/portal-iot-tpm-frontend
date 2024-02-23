@@ -119,19 +119,20 @@
         }
 
         ul {
-            list-style-type: none;
+            list-style-type: circle;
 
             li {
                 font-size: 1rem;
                 font-weight: 400;
                 margin-bottom: 8px;
                 position: relative;
-                padding-left: 20px;
                 line-height: 1.5;
 
                 &::before {
-                    content: "•";
+                    content: "⚪";
+                    font-size: 1.5rem;
                     position: absolute;
+                    top: 0;
                     left: 0;
                     color: $primary-color;
                 }

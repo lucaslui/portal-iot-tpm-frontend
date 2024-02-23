@@ -10,58 +10,18 @@
 
     gap: 2px;
 
-    .group {
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-start;
-        align-items: center;
+    time {
+        font-size: 0.7rem;
+        font-weight: 500;
 
-        gap: 2px;
-
-        i {
-            text-align: center;
-            vertical-align: super;
-        }
-
-        .short_date {
-            font-size: 0.7rem;
-
-            display: none;
-            white-space: nowrap;
-        }
-
-        .long_date {
-            font-size: 0.7rem;
-
-            display: inline-block;
-            white-space: nowrap;
-        }
-
-        time {
-            font-size: 0.7rem;
-            font-weight: 500;
-
-            white-space: nowrap;
-        }
+        white-space: nowrap;
     }
 }
 
 @media #{$media-query-mobile} {
     .date_card {
-        .group {
-            .long_date {
-                display: none;
-            }
-
-            .short_date {
-                font-size: 0.6rem;
-
-                display: inline-block;
-            }
-
-            time {
-                font-size: 0.6rem;
-            }
+        time {
+            font-size: 0.6rem;
         }
     }
 }
