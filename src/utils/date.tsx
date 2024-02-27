@@ -7,7 +7,7 @@ export const getShortDateFormat = (date: Date | string): string => {
     return `${dayConverted}/${(monthConverter)}/${ISODate.getFullYear()}`
 }
 
-export const getLongDateFormat = (date: Date | string): string => {
+export const getLongStringDateFormat = (date: Date | string): string => {
     const ISODate = new Date(date)
     const day = ISODate.getDay()
     const dayConverted = day < 10 ? `0${day}` : day
@@ -27,4 +27,26 @@ export const getLongDateFormat = (date: Date | string): string => {
         'dezembro'
     ]
     return `${dayConverted} de ${months[month]} de ${ISODate.getFullYear()}`
+}
+
+export const getShortStringDateFormat = (date: Date | string): string => {
+    const ISODate = new Date(date)
+    const day = ISODate.getDay()
+    const dayConverted = day < 10 ? `0${day}` : day
+    const month = ISODate.getMonth() + 1
+    const months = [
+        'jan',
+        'fev',
+        'mar',
+        'abr',
+        'mai',
+        'jun',
+        'jul',
+        'ago',
+        'set',
+        'out',
+        'nov',
+        'dez'
+    ]
+    return `${dayConverted} ${months[month]} ${ISODate.getFullYear()}`
 }

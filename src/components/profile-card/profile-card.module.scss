@@ -30,8 +30,10 @@
         justify-content: flex-start;
         align-items: flex-start;
 
+        gap: 2px;
+        
         h3 {
-            font-size: 0.8rem;
+            font-size: 0.7rem;
             font-weight: 800;
 
             margin: 0;
@@ -66,8 +68,8 @@
     .profile_card {
         .info {
             h3 {
-                font-size: 0.7rem;
-                font-weight: 700;
+                font-size: 0.6rem;
+                font-weight: 800;
 
                 width: 140px;
 

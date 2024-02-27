@@ -6,8 +6,7 @@ import styles from './post-card-flexible.module.scss'
 
 import articleI18N from '@/i18n/article'
 import { ArticleViewModel } from '@/model/article'
-import ProfileCard from '@/components/profile-card/profile-card'
-import DateCard from '@/components/date-card/date-card'
+import ProfileDateCard from '@/components/profile-date-card/profile-date-card'
 
 type Props = {
     article: ArticleViewModel
@@ -31,8 +30,7 @@ const PostCardFlexible: React.FC<Props> = async ({ article }: Props) => {
                     <p> {article.description} </p>
                 </div>
                 <div className={styles.bottom}>
-                    <ProfileCard article={article} />
-                    <DateCard article={article} />
+                    <ProfileDateCard article={article} />
                 </div>
             </div>
         </Link>
