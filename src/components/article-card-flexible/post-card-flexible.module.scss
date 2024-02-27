@@ -4,7 +4,7 @@
 .post_card_full {
     border-radius: 8px;
 
-    height: 50vh;
+    height: 55vh;
 
     h1 {
         font-size: 1.2rem;
@@ -24,7 +24,7 @@
         flex: 1 1 65%;
 
         img {
-            object-fit: "cover";
+            object-fit: cover;
 
             border-top-left-radius: 8px;
             border-bottom-left-radius: 8px;
@@ -277,8 +277,6 @@
         }
 
         .image_container {
-            flex: 1 1 100%;
-
             img {
                 border-top-left-radius: 8px;
                 border-top-right-radius: 8px;
@@ -322,6 +320,12 @@
                         border-radius: 3px;
                         margin-right: 5px;
                     }
+                }
+
+                p {
+                    font-size: 0.7rem;
+
+                    -webkit-line-clamp: 3;
                 }
             }
 

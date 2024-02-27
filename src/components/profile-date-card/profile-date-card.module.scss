@@ -45,3 +45,19 @@
         }
     }
 }
+
+@media #{$media-query-mobile} {
+    .profile_date_card {
+        .info {
+            label {
+                font-size: 0.7rem;
+                font-weight: 700;
+            }
+
+            time {
+                font-size: 0.6rem;
+                font-weight: 500;
+            }
+        }
+    }
+}
