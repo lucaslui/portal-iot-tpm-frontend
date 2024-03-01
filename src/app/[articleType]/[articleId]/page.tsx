@@ -5,6 +5,8 @@ import ReactHtmlParser from 'html-react-parser'
 
 import styles from './page.module.scss'
 
+import './custom-quill-now.css'
+
 import { ArticleModel, ArticleViewModel } from '@/model/article'
 
 import articleI18N from '@/i18n/article'

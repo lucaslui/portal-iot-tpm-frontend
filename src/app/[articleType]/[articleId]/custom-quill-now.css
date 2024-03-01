@@ -1,0 +1,5 @@
+@media only screen and (max-width: 667px) {
+    .ql-editor .ql-indent-1:not(.ql-direction-rtl) {
+        padding-left: 1em !important;
+    }
+}
