@@ -7,11 +7,18 @@
     align-items: flex-start;
     justify-content: stretch;
 
-    gap: $inside-gap;
+    gap: 32px;
 
     padding: 20px;
 
     max-width: $site-content-width;
+
+    h1 {
+        color: $primary-color;
+
+        font-size: 2rem;
+        font-weight: 700;
+    }
 
     section {
         display: flex;
@@ -19,17 +26,23 @@
         justify-content: flex-start;
         align-items: stretch;
 
-        gap: $inside-gap;
+        gap: 16px;
 
-        .profile-badge {
-            width: 200px;
-            height: 200px;
-            border-radius: 50%;
-            background-color: $primary-color;
+        a {
+            color: $link-color;
+            text-decoration: underline;
+            font-weight: 500;
 
-            .profile-badge--dark {
-                background-color: $background-color !important;
+            &:hover {
+                color: #2740ce;
             }
         }
+    }
+
+    h3 {
+        color: $primary-color;
+
+        font-size: 1.2rem;
+        font-weight: 700;
     }
 }

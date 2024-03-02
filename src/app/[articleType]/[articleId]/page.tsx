@@ -1,6 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
-import { Montserrat, Poppins } from 'next/font/google'
+import { Poppins } from 'next/font/google'
 import ReactHtmlParser from 'html-react-parser'
 
 import styles from './page.module.scss'
@@ -26,12 +26,6 @@ export async function generateStaticParams({ params }: any): Promise<{ articleId
         .filter((article: ArticleModel) => article.type === params.articleType)
         .map((article: ArticleModel) => ({ articleId: article.id }))
 }
-
-const montserrat = Montserrat({
-    subsets: ['latin'],
-    style: ["normal"],
-    weight: ['400', '500', '600', '700', '900'],
-})
 
 const poppins = Poppins({
     subsets: ['latin'],
