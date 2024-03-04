@@ -44,7 +44,7 @@
         flex-grow: 1;
 
         color: $primary-color;
-        background-color: $background-button-color;
+        background-color: $background-color;
 
         padding: 12px;
 
@@ -75,7 +75,8 @@
 
         gap: 12px;
 
-        background-color: $background-color;
+        background-color: $background-button-color;
+
         padding: 12px;
         justify-content: space-between;
 

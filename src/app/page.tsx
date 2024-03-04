@@ -25,6 +25,7 @@ const ContronPanel: React.FC = async () => {
                         )
                     })
                 }
+                <div className={styles.spacer}></div>
             </div>
         </div>
     )

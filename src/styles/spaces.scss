@@ -1,8 +1,8 @@
 $site-content-width: 1080px;
 
 $media-query-mobile: "only screen and (max-width: 667px)";
-$media-query-tablet: "only screen and (min-width: 668px) and (max-width: $site-content-width)";
-$media-query-desktop: "only screen and (min-width: ($site-content-width + 1))";
+$media-query-tablet: "only screen and (min-width: 668px) and (max-width: 1080px)";
+$media-query-desktop: "only screen and (min-width: 1081px)";
 
 $outside-gap: 16px;
 $inside-gap: 16px;
