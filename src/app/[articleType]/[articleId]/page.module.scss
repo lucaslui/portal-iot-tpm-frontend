@@ -54,26 +54,6 @@
             margin-left: 4px;
         }
 
-        ul {
-            display: flex;
-            flex-direction: row;
-            justify-content: flex-start;
-            align-items: center;
-
-            gap: 8px;
-
-            li {
-                font-size: 0.7rem;
-                font-weight: 500;
-
-                color: #fff;
-                padding: 4px 12px;
-                background-color: $background-button-color;
-                border-radius: 3px;
-                margin-right: 5px;
-            }
-        }
-
         .image_container {
             position: relative;
 
