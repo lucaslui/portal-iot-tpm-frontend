@@ -1,0 +1,19 @@
+@import '../../styles/colors.scss';
+@import '../../styles/spaces.scss';
+
+.category_list {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+
+    gap: 8px;
+
+    flex-wrap: wrap;
+}
+
+@media #{$media-query-mobile} {
+    .category_list {
+        gap: 6px;
+    }
+}

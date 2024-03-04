@@ -74,22 +74,11 @@
             justify-content: flex-start;
             align-items: stretch;
 
-            gap: 24px;
+            gap: 16px;
 
             flex: 1;
 
             padding: 16px;
-
-            ul {
-                display: flex;
-                flex-direction: row;
-                justify-content: flex-start;
-                align-items: center;
-
-                gap: 8px;
-
-                flex-wrap: wrap;
-            }
 
             p {
                 font-size: 0.9rem;
@@ -301,26 +290,6 @@
 
             .top {
                 padding: 16px;
-
-                ul {
-                    display: flex;
-                    flex-direction: row;
-                    justify-content: flex-start;
-                    align-items: center;
-
-                    gap: 16px;
-
-                    li {
-                        font-size: 0.7rem;
-                        font-weight: 500;
-
-                        color: #fff;
-                        padding: 4px 12px;
-                        background-color: $background-button-color;
-                        border-radius: 3px;
-                        margin-right: 5px;
-                    }
-                }
 
                 p {
                     font-size: 0.7rem;

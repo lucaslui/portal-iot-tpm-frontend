@@ -12,6 +12,7 @@ import { ArticleModel, ArticleViewModel } from '@/model/article'
 import articleI18N from '@/i18n/article'
 import ProfileCard from '@/components/profile-card/profile-card'
 import DateCard from '@/components/date-card/date-card'
+import CategoryList from '@/components/category-list/category-list'
 
 type Props = {
     params: {
@@ -55,11 +56,7 @@ const Article: React.FC<Props> = async ({ params }: { params: { articleId: strin
                     <span> {article.type ? articleI18N.pt[article.type] : ''} </span>
                 </div>
                 <h2> {article.description} </h2>
-                <ul>
-                    {article.categories?.map((category, index) => (
-                        <li key={index}> {category.name} </li>
-                    ))}
-                </ul>
+                <CategoryList categories={article.categories} />
                 <div className={styles.image_container}>
                     <Image src={article.imageUrl} fill alt='Imagem do Artigo' />
                 </div>

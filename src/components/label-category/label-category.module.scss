@@ -14,3 +14,10 @@
 
     white-space: nowrap;
 }
+
+@media #{$media-query-mobile} {
+    .label_category {
+        font-size: 0.6rem;
+        padding: 2px;
+    }
+}
