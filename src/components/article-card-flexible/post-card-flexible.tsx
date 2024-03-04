@@ -7,6 +7,7 @@ import styles from './post-card-flexible.module.scss'
 import articleI18N from '@/i18n/article'
 import { ArticleViewModel } from '@/model/article'
 import ProfileDateCard from '@/components/profile-date-card/profile-date-card'
+import LabelCategory from '@/components/label-category/label-category'
 
 type Props = {
     article: ArticleViewModel
@@ -24,7 +25,9 @@ const PostCardFlexible: React.FC<Props> = async ({ article }: Props) => {
                 <div className={styles.top}>
                     <ul>
                         {article.categories?.map((category, index) => (
-                            <li key={index}> {category.name} </li>
+                            <li key={index}>
+                                <LabelCategory name={category.name} />
+                            </li>
                         ))}
                     </ul>
                     <p> {article.description} </p>
