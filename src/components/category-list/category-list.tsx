@@ -11,13 +11,11 @@ type CategoryListProps = {
 
 const CategoryList: React.FC<CategoryListProps> = (props: CategoryListProps) => {
     return (
-        <ul className={styles.category_list}>
+        <div className={styles.category_list}>
             {props.categories?.map((category, index) => (
-                <li key={index}>
-                    <LabelCategory name={category.name} />
-                </li>
+                <LabelCategory name={category.name} key={index} />
             ))}
-        </ul>
+        </div>
     )
 }
 

@@ -13,7 +13,7 @@ type Props = {
     article: ArticleViewModel
 }
 
-const PostCardFlexible: React.FC<Props> = async ({ article }: Props) => {
+const PostCardFlexible: React.FC<Props> = ({ article }: Props) => {
     return (
         <Link key={article.id} className={styles.post_card_full} href={`/${article.type}/${article.id}`}>
             <div className={styles.image_container}>
