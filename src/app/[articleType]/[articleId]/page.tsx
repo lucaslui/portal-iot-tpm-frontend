@@ -13,6 +13,7 @@ import articleI18N from '@/i18n/article'
 import ProfileCard from '@/components/profile-card/profile-card'
 import DateCard from '@/components/date-card/date-card'
 import CategoryList from '@/components/category-list/category-list'
+import Breadcrumb from '@/components/breadcrumb/breadcrumb'
 
 type Props = {
     params: {
@@ -51,6 +52,9 @@ const Article: React.FC<Props> = async ({ params }: { params: { articleId: strin
     return (
         <div className={styles.article}>
             <header>
+                <div>
+                    <Breadcrumb/>
+                </div>
                 <div className={styles.top}>
                     <h1> {article.title} </h1>
                     <span> {article.type ? articleI18N.pt[article.type] : ''} </span>

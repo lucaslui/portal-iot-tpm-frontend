@@ -1,0 +1,110 @@
+@import '../../styles/colors.scss';
+@import '../../styles/spaces.scss';
+
+.breadcrumb {
+    display: inline-block;
+    list-style: none;
+
+    margin: 12px 4px;
+
+    font-size: 0.8rem;
+
+    .icon {
+        font-size: 14px;
+    }
+
+    li {
+        float: left;
+
+        a {
+            display: block;
+            position: relative;
+
+            text-decoration: none;
+
+            height: 40px;
+            line-height: 40px;
+
+            color: #FFF;
+            background: $background-button-color;
+
+            padding: 0 8px 0 5px;
+
+            text-align: center;
+            margin-right: 23px;
+        }
+
+        &:first-child {
+            a {
+                padding-left: 15px;
+                border-radius: 4px 0 0 4px;
+
+                &:before {
+                    border: none;
+                }
+            }
+        }
+
+        &:last-child {
+            a {
+                padding-right: 15px;
+                border-radius: 0 4px 4px 0;
+
+                &:after {
+                    border: none;
+                }
+            }
+        }
+
+        a {
+            text-transform: capitalize;
+            &:before,
+            &:after {
+                content: "";
+                position: absolute;
+                top: 0;
+                border: 0 solid $background-button-color;
+                border-width: 20px 10px;
+                width: 0;
+                height: 0;
+            }
+
+            &:before {
+                left: -20px;
+                border-left-color: transparent;
+            }
+
+            &:after {
+                left: 100%;
+                border-color: transparent;
+                border-left-color: $background-button-color;
+            }
+
+            &:hover {
+                background-color: $background-color;
+
+                &:before {
+                    border-color: $background-color;
+                    border-left-color: transparent;
+                }
+
+                &:after {
+                    border-left-color: $background-color;
+                }
+            }
+
+            &:active {
+                background-color: #ce1919;
+
+                &:before {
+                    border-color: $background-color;
+                    border-left-color: transparent;
+                }
+
+                &:after {
+                    border-left-color: $background-color;
+                }
+            }
+        }
+    }
+}
