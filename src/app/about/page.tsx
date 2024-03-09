@@ -19,15 +19,15 @@ const About: React.FC = () => {
 
                     <br /><br />
 
-                    O projeto foi iniciado pelo desenvolvedor e entusiasta <a href="https://br.linkedin.com/in/lucas-lui-motta" target="_blank">Lucas Lui Motta</a> qual adora debater sobre o assunto e acredita no poder no ensino baseado em projetos.
+                    O projeto foi iniciado pelo desenvolvedor e entusiasta <a href="https://br.linkedin.com/in/lucas-lui-motta" target="_blank">Lucas Lui Motta</a>, que adora debater sobre o assunto e acredita no poder do ensino baseado em projetos.
 
                     <br /><br />
 
-                    Os conteúdos encontrados na biblioteca estão divididos por <b>conceitos</b>, <b>tutoriais</b>, <b>projetos</b> e <b>notícias</b>.
+                    Os conteúdos encontrados na biblioteca estão divididos conceitos, tutoriais, projetos e notícias.
 
                     <br /><br />
 
-                    Para iniciar os estudos, nós recomendados a leitura de &quot;Introdução à Internet das Coisas&quot;:
+                    Para iniciar os estudos, recomendamos a leitura de <b>Introdução à Internet das Coisas</b>:
                 </p>
                 <ul>
                     <li><a href="/concepts/65c41bac7750e3ea07c83e69">Parte I</a></li>
@@ -37,7 +37,7 @@ const About: React.FC = () => {
                     <li><a href="/concepts/65e0fdae7e49bb7e28d6b787">Parte V</a></li>
                 </ul>
                 <p>
-                    Boa parte do conteúdo apresentado é baseado em <b>minha opinião</b> que vem boa parte de experiências pessoais, e uma ou outra parte de referências devidamente citadas.
+                    Boa parte do conteúdo apresentado é fundamentado em minha opinião, a qual se baseia em experiências pessoais, além de referências devidamente citadas.
                 </p>
             </section>
             <h3>
