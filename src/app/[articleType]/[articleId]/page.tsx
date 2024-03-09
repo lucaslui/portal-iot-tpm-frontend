@@ -52,9 +52,7 @@ const Article: React.FC<Props> = async ({ params }: { params: { articleId: strin
     return (
         <div className={styles.article}>
             <header>
-                <div>
-                    <Breadcrumb/>
-                </div>
+                <Breadcrumb articleTitle={article.title}/>
                 <div className={styles.top}>
                     <h1> {article.title} </h1>
                     <span> {article.type ? articleI18N.pt[article.type] : ''} </span>

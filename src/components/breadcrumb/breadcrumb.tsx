@@ -6,21 +6,28 @@ import { usePathname } from 'next/navigation'
 
 import styles from './breadcrumb.module.scss'
 
-const Breadcrumb = () => {
+type Props = {
+    articleTitle: string
+}
+
+const Breadcrumb: React.FC<Props> = (props: Props) => {
     const paths = usePathname()
     const pathNames = paths.split('/').filter(path => path)
 
     return (
         <ul className={styles.breadcrumb}>
-            <li><Link href={'/'}>Home</Link></li>
+            <li>
+                <Link href={'/'}>
+                    <i className={`fas fa-home`} />
+                </Link>
+            </li>
             {pathNames.length > 0}
             {
-                pathNames.map((link, index) => {
+                pathNames.slice(0, -1).map((link, index) => {
                     let href = `/${pathNames.slice(0, index + 1).join('/')}`
-                    let itemClasses = paths === href ? `${styles.active}` : ''
                     return (
                         <React.Fragment key={index}>
-                            <li className={itemClasses} >
+                            <li>
                                 <Link href={href}>{link}</Link>
                             </li>
                             {pathNames.length !== index + 1}
@@ -28,7 +35,10 @@ const Breadcrumb = () => {
                     )
                 })
             }
-        </ul>
+            <li>
+                <Link href={`/${pathNames.join('/')}`}>{props.articleTitle}</Link>
+            </li>
+        </ul >
     )
 }
 
