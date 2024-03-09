@@ -5,6 +5,7 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 
 import styles from './breadcrumb.module.scss'
+import articleI18N from '@/i18n/article'
 
 type Props = {
     articleTitle: string
@@ -27,8 +28,8 @@ const Breadcrumb: React.FC<Props> = (props: Props) => {
                     let href = `/${pathNames.slice(0, index + 1).join('/')}`
                     return (
                         <React.Fragment key={index}>
-                            <li>
-                                <Link href={href}>{link}</Link>
+                            <li style={{ textTransform: 'capitalize' }}>
+                                <Link href={href}>{articleI18N.pt[link as keyof typeof articleI18N.pt]}</Link>
                             </li>
                             {pathNames.length !== index + 1}
                         </React.Fragment>

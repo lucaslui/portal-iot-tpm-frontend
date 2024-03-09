@@ -15,13 +15,14 @@ const Header: React.FC = () => {
                 <main>
                     <h1> &lt; <strong>Internet of Things P-Library</strong> <strong className={styles.abbreviate}>IoT P-Library</strong>/&gt; </h1>
                     <h2>
-                        Aiming to disseminate knowledge about the Internet of Things in a simple, practical and objective way
+                        {/* Aiming to disseminate knowledge about the Internet of Things in a simple, practical and objective way */}
+                        Conteúdo sobre Internet das Coisas de forma simples, prática e objetiva
                     </h2>
                 </main>
             </Link>
             <Link href={`/about`} className={styles.about}>
                 <i className="fas fa-info-circle" />
-                <span> About </span>
+                <span> Sobre </span>
             </Link>
         </header>
     )

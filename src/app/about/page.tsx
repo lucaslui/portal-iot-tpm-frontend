@@ -12,29 +12,36 @@ const poppins = Poppins({
 const About: React.FC = () => {
     return (
         <div className={styles.about}>
-            <h1> About </h1>
+            <h1> Sobre o projeto </h1>
             <section className={`${poppins.className}`}>
                 <p>
-                    The Internet of Things P-Library is a public library that aims to disseminate knowledge about
-                    the Internet of Things in a simple, practical and objective way.
+                    O principal objetivo do projeto é disseminar conhecimento sobre Internet das Coisas de forma simples, prática e objetiva.
 
                     <br /><br />
 
-                    The project was created by the developer and IoT enthusiast <a href="https://br.linkedin.com/in/lucas-lui-motta" target="_blank">Lucas Lui Motta</a> who loves to debate on the subject and believes that there is no single truth that cannot be discussed or questioned.
+                    O projeto foi iniciado pelo desenvolvedor e entusiasta <a href="https://br.linkedin.com/in/lucas-lui-motta" target="_blank">Lucas Lui Motta</a> qual adora debater sobre o assunto e acredita no poder no ensino baseado em projetos.
 
                     <br /><br />
 
-                    Within the vast area that is the IoT there is a vast world of possibilities. Various verticals
-                    such as agriculture, industry, health, smart cities, among others, can be explored and discussed in the library.
+                    Os conteúdos encontrados na biblioteca estão divididos por <b>conceitos</b>, <b>tutoriais</b>, <b>projetos</b> e <b>notícias</b>.
 
                     <br /><br />
 
-                    Various content related to IoT such as concepts, guides, projects and news will be published.
-                    Starting from adoptions of conceptual reference models to discussions about business, requirements and technology.
+                    Para iniciar os estudos, nós recomendados a leitura de &quot;Introdução à Internet das Coisas&quot;:
+                </p>
+                <ul>
+                    <li><a href="/concepts/65c41bac7750e3ea07c83e69">Parte I</a></li>
+                    <li><a href="/concepts/65c641aee21e7ad9a8e43f7d">Parte II</a></li>
+                    <li><a href="/concepts/65c641b3e21e7ad9a8e43f7e">Parte III</a></li>
+                    <li><a href="/concepts/65e0fdae7e49bb7e28d6b787">Parte IV</a></li>
+                    <li><a href="/concepts/65e0fdae7e49bb7e28d6b787">Parte V</a></li>
+                </ul>
+                <p>
+                    Boa parte do conteúdo apresentado é baseado em <b>minha opinião</b> que vem boa parte de experiências pessoais, e uma ou outra parte de referências devidamente citadas.
                 </p>
             </section>
             <h3>
-                Feel free to contact me if you have any questions or suggestions.
+                Sinta-se à vontade para entrar em contato se tiver alguma dúvida ou sugestão.
             </h3>
         </div>
     )

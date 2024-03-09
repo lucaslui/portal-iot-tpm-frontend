@@ -8,22 +8,22 @@ import styles from './navbar.module.scss'
 
 const navItemsRight = [
     {
-        title: 'Concepts',
+        title: 'Conceitos',
         url: '/concepts',
-        icon: 'fas fa-lightbulb'
-    },
-    {
-        title: 'Tutorials',
-        url: '/tutorials',
         icon: 'fas fa-graduation-cap'
     },
     {
-        title: 'Projects',
+        title: 'Tutoriais',
+        url: '/tutorials',
+        icon: 'fas fa-book-open'
+    },
+    {
+        title: 'Projetos',
         url: '/projects',
         icon: 'fas fa-project-diagram'
     },
     {
-        title: 'News',
+        title: 'Notícias',
         url: '/news',
         icon: 'fas fa-newspaper'
     },

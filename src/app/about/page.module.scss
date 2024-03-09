@@ -22,19 +22,67 @@
 
     section {
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         justify-content: flex-start;
-        align-items: stretch;
+        align-items: center;
 
         gap: 16px;
 
-        a {
-            color: $link-color;
-            text-decoration: underline;
-            font-weight: 500;
+        p {
+            a {
+                color: $link-color;
+                text-decoration: underline;
+                font-weight: 500;
 
-            &:hover {
-                color: #2740ce;
+                &:hover {
+                    color: #2740ce;
+                }
+            }
+
+            b {
+                font-weight: 700;
+            }
+        }
+
+        ul {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+
+            gap: 16px;
+
+            flex-wrap: wrap;
+
+            margin: 12px 0px;
+
+            li {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+
+                gap: 8px;
+
+                text-align: center;
+
+                height: 84px;
+                width: 84px;
+
+                padding: 12px;
+
+                border-radius: 50%;
+                background-color: $background-button-color;
+
+                a {
+                    text-decoration: none;
+
+                    color: $primary-color;
+                }
+
+                &:hover {
+                    background-color: $link-color;
+                }
             }
         }
     }
@@ -42,7 +90,7 @@
     h3 {
         color: $primary-color;
 
-        font-size: 1.2rem;
+        font-size: 1.1rem;
         font-weight: 700;
     }
 }
