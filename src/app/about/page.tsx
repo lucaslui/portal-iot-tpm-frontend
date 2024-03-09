@@ -23,7 +23,7 @@ const About: React.FC = () => {
 
                     <br /><br />
 
-                    Os conteúdos encontrados na biblioteca estão divididos conceitos, tutoriais, projetos e notícias.
+                    Os conteúdos encontrados na biblioteca estão divididos por conceitos, tutoriais, projetos e notícias.
 
                     <br /><br />
 
