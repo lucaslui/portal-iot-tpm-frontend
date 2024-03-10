@@ -55,14 +55,14 @@
     .navbar {
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
-        align-items: flex-start;
+        justify-content: center;
+        align-items: center;
 
-        font-size: 0.7rem;
+        font-size: 0.65rem;
 
         margin-top: 12px;
 
-        padding: 0 8px;
+        padding: 0 4px;
 
         a {
             display: flex;
