@@ -5,6 +5,7 @@ import styles from './page.module.scss'
 
 import ArticleCard from '@/components/article-card/article-card'
 import { ArticleModel } from '@/model/article'
+import FilterBar from '@/components/filter-bar/filter-bar'
 
 
 type Props = {
@@ -24,16 +25,19 @@ const Articles: React.FC<Props> = async ({ params }: { params: { articleType: st
     const articles = await loadArticlePosts()
 
     return (
-        <div className={styles.articles_grid}>
-            {
-                articles.map((article: any) => {
-                    return (
-                        <Link key={article.id} href={`/${params.articleType}/${article.id}`}>
-                            <ArticleCard article={article} />
-                        </Link>
-                    )
-                })
-            }
+        <div className={styles.articles}>
+            <FilterBar />
+            <div className={styles.articles_grid}>
+                {
+                    articles.map((article: any) => {
+                        return (
+                            <Link key={article.id} href={`/${params.articleType}/${article.id}`}>
+                                <ArticleCard article={article} />
+                            </Link>
+                        )
+                    })
+                }
+            </div>
         </div>
     )
 }
