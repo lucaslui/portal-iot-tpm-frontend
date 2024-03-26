@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { Orbitron } from 'next/font/google'
+import { GoogleAnalytics } from '@next/third-parties/google'
 
 import '../styles/globals.scss'
 import styles from './layout.module.scss'
@@ -39,6 +40,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
                 </main>
                 <Footer />
             </body>
+            <GoogleAnalytics gaId="G-L5M2QF2FFW" />
         </html>
     )
 }
