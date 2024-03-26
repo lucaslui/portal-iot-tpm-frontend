@@ -6,7 +6,11 @@ import { ArticleViewModel } from '@/model/article'
 import PostCardFlexible from '@/components/article-card-flexible/post-card-flexible'
 
 const loadPosts = async (): Promise<ArticleViewModel[]> => {
-    const result = await fetch(`${process.env.API_URL}/api/articles`)
+    const result = await fetch(`${process.env.API_URL}/api/articles`, {
+        next: {
+            revalidate: 10
+        }
+    })
     const data = await result.json()
     return data.articles
 }
