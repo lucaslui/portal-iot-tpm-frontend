@@ -36,9 +36,9 @@ const About: React.FC = () => {
                     <li><a href="/concepts/65e0fdae7e49bb7e28d6b787">Parte IV</a></li>
                     <li><a href="/concepts/65e0fdae7e49bb7e28d6b787">Parte V</a></li>
                 </ul>
-                <p>
+                {/* <p>
                     Boa parte do conteúdo apresentado é fundamentado em minha opinião, a qual se baseia em experiências pessoais, além de referências devidamente citadas.
-                </p>
+                </p> */}
             </section>
             <h3>
                 Sinta-se à vontade para entrar em contato se tiver alguma dúvida ou sugestão.

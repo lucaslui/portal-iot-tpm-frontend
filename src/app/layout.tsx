@@ -17,8 +17,8 @@ const roboto = Orbitron({
 })
 
 export const metadata: Metadata = {
-    title: 'Internet of Things P-Library',
-    description: 'Free web tutorials about Internet of Things',
+    title: 'Comunidade TPM',
+    description: 'Free web content about Internet of Things',
     authors: [{ name: "Lucas Lui Motta", url: "https://github.com/lucaslui" }],
     keywords: 'Internet of Things'
 }
