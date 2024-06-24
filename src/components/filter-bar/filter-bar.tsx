@@ -6,20 +6,19 @@ import styles from './filter-bar.module.scss'
 import FilterWrapper from '@/components/filter-wrapper/filter-wrapper'
 import InputSearch from '@/components/input-search/search'
 
-const FilterBar: React.FC = () => {
-    const [filters, setFilters] = useState({
-        search: '',
-        categories: ''
-    })
-
-    const handleFilter = async (event: React.ChangeEvent<HTMLSelectElement | HTMLInputElement>) => {
-        setFilters({ ...filters, [event.target.name]: event.target.value })
+type Props = {
+    filters: {
+        search: string
+        categories: string
     }
+    handleFilter: (event: React.ChangeEvent<HTMLSelectElement | HTMLInputElement>) => void
+}
 
+const FilterBar: React.FC<Props> = (props: Props) => {
     return (
         <div className={styles.filters}>
-            <InputSearch value={filters.search} onChange={handleFilter} />
-            <FilterWrapper name="categories" value={filters.categories} onChange={handleFilter}>
+            <InputSearch value={props.filters.search} onChange={props.handleFilter} />
+            <FilterWrapper name="categories" value={props.filters.categories} onChange={props.handleFilter}>
                 <option value="" disabled defaultValue="" hidden>Filtrar por categoria</option>
                 <option value="">Todos</option>
                 <option value="concepts">Conceitos</option>
