@@ -27,7 +27,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
     return (
         <html lang="en" suppressHydrationWarning>
             <head>
-                <link href="https://use.fontawesome.com/releases/v5.10.2/css/all.css" rel="stylesheet" />
+                <link href="https://use.fontawesome.com/releases/v6.5.2/css/all.css" rel="stylesheet" />
                 <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet" />
                 <link rel="icon" href="/favicon.svg" sizes="any" />
             </head>

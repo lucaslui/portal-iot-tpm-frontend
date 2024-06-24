@@ -34,21 +34,23 @@ const NavBar: React.FC = () => {
 
     return (
         <nav className={styles.navbar}>
-            <div className={styles.left_side}>
-                <Link href='/' className={pathname === '/' ? styles.active : ''}>
-                    <i className="fas fa-home" />
-                    <span> Home </span>
-                </Link>
-            </div>
-            <div className={styles.right_side}>
-                {
-                    navItemsRight.map((item, index) => (
-                        <Link key={index} href={item.url} className={pathname.includes(item.url) ? styles.active : ''}>
-                            <i className={item.icon} />
-                            <span> {item.title} </span>
-                        </Link>
-                    ))
-                }
+            <div className={styles.content}>
+                <div className={styles.left_side}>
+                    <Link href='/' className={pathname === '/' ? styles.active : ''}>
+                        <i className="fas fa-home" />
+                        <span> Home </span>
+                    </Link>
+                </div>
+                <div className={styles.right_side}>
+                    {
+                        navItemsRight.map((item, index) => (
+                            <Link key={index} href={item.url} className={pathname.includes(item.url) ? styles.active : ''}>
+                                <i className={item.icon} />
+                                <span> {item.title} </span>
+                            </Link>
+                        ))
+                    }
+                </div>
             </div>
         </nav>
     )
