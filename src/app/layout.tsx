@@ -17,10 +17,10 @@ const roboto = Orbitron({
 })
 
 export const metadata: Metadata = {
-    title: 'Biblioteca TPM',
-    description: 'Free web content about Internet of Things',
+    title: 'Portal IoT TpM',
+    description: 'Conteúdo sobre Internet das Coisas de forma simples, prática e objetiva',
     authors: [{ name: "Lucas Lui Motta", url: "https://github.com/lucaslui" }],
-    keywords: 'Internet of Things'
+    keywords: 'Internet of Things, Blockchain, Artificial Inteligence'
 }
 
 const RootLayout = ({ children }: { children: React.ReactNode }) => {
@@ -29,7 +29,8 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
             <head>
                 <link href="https://use.fontawesome.com/releases/v6.5.2/css/all.css" rel="stylesheet" />
                 <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet" />
-                <link rel="icon" href="/favicon.svg" sizes="any" />
+                {/* <link rel="icon" href="/favicon.svg" sizes="any" /> */}
+                <link rel="icon" type="image/png" href="/favicon.png" />
             </head>
             <body className={roboto.className}>
                 <ParticlesBackground />

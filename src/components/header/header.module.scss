@@ -7,7 +7,7 @@
     justify-content: center;
     align-items: center;
 
-    padding: 16px;
+    padding: 24px;
 
     background-color: $background-secondary-color;
 
@@ -28,8 +28,10 @@
             gap: 16px;
 
             img {
-                height: 56px;
+                height: 48px;
                 width: 56px;
+
+                filter: drop-shadow(1px 1px 4px $logo-color);
             }
 
             main {
@@ -41,13 +43,14 @@
                 gap: 2px;
 
                 h1 {
-                    font-size: 1rem;
+                    font-size: 1.2rem;
                     font-weight: 900;
 
                     color: $primary-color;
 
                     strong {
-                        text-shadow: 0 0 1rem $primary-color;
+                        color: $logo-color;
+                        text-shadow: 0 0 1rem $logo-color;
                     }
 
                     .abbreviate {

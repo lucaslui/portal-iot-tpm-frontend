@@ -4,7 +4,7 @@ import Image from 'next/image'
 
 import styles from './header.module.scss'
 
-import LogoImage from '../../assets/imgs/logo.svg'
+import LogoImage from '../../assets/imgs/logo.png'
 
 const Header: React.FC = () => {
 
@@ -15,7 +15,7 @@ const Header: React.FC = () => {
                     <Link href='/' className={styles.logo}>
                         <Image src={LogoImage} alt="logo" />
                         <main>
-                            <h1> &lt; <strong>Portal IoT-TPM Unicamp</strong> <strong className={styles.abbreviate}>Comunidade IoT-TPM</strong>/&gt; </h1>
+                            <h1> Portal <strong>IoT-TpM</strong> Unicamp <strong className={styles.abbreviate}>Comunidade IoT-TPM</strong> </h1>
                             <h2>
                                 {/* Aiming to disseminate knowledge about the Internet of Things in a simple, practical and objective way */}
                                 Conteúdo sobre Internet das Coisas de forma simples, prática e objetiva
