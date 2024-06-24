@@ -14,7 +14,12 @@ const ProfileDateCard: React.FC<Props> = ({ article }: Props) => {
     return (
         <section className={styles.profile_date_card}>
             <div className={styles.image_container}>
-                <Image src={article.user.imageUrl ? article.user.imageUrl : userLogo} alt='Imagem do Perfil' width={30} height={30} />
+                <Image
+                    src={article.user.imageUrl ? article.user.imageUrl : userLogo}
+                    alt='Imagem do Perfil'
+                    width={30}
+                    height={30}
+                />
             </div>
             <div className={styles.info}>
                 <label> {article.user.name} </label>

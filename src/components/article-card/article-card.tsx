@@ -14,7 +14,14 @@ const ArticleCard: React.FC<Props> = ({ article }: Props) => {
     return (
         <div className={styles.article_card}>
             <div className={styles.image_container}>
-                <Image src={article.imageUrl} alt='Imagem do Artigo' fill />
+                <Image
+                    src={article.imageUrl}
+                    alt='Imagem do Artigo'
+                    fill
+                    style={{ objectFit: 'cover' }}
+                    sizes="auto"
+                    priority
+                    quality={80} />
             </div>
             <div className={styles.body}>
                 <h1>{article.title}</h1>

@@ -52,7 +52,7 @@ const Article: React.FC<Props> = async ({ params }: { params: { articleId: strin
     return (
         <div className={styles.article}>
             <header>
-                <Breadcrumb articleTitle={article.title}/>
+                <Breadcrumb articleTitle={article.title} />
                 <div className={styles.top}>
                     <h1> {article.title} </h1>
                     <span> {article.type ? articleI18N.pt[article.type] : ''} </span>
@@ -60,7 +60,15 @@ const Article: React.FC<Props> = async ({ params }: { params: { articleId: strin
                 <h2> {article.description} </h2>
                 <CategoryList categories={article.categories} />
                 <div className={styles.image_container}>
-                    <Image src={article.imageUrl} fill alt='Imagem do Artigo' />
+                    <Image
+                        src={article.imageUrl}
+                        alt='Imagem do Artigo'
+                        fill
+                        style={{ objectFit: 'cover' }}
+                        sizes="auto"
+                        priority
+                        quality={80}
+                    />
                 </div>
                 <div className={styles.bottom}>
                     <ProfileCard article={article} />
