@@ -32,10 +32,6 @@ const Header: React.FC = () => {
                             <i className="fa-brands fa-youtube"></i>
                         </Link>
                     </div>
-                    <Link href={`/about`} className={styles.about}>
-                        <i className="fas fa-info-circle" />
-                        <span> Sobre </span>
-                    </Link>
                 </div>
             </div>
         </header>
