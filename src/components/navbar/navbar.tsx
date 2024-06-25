@@ -35,13 +35,13 @@ const NavBar: React.FC = () => {
     return (
         <nav className={styles.navbar}>
             <div className={styles.content}>
-                <div className={styles.left_side}>
+                <div className={styles.side}>
                     <Link href='/' className={pathname === '/' ? styles.active : ''}>
                         <i className="fas fa-home" />
                         <span> Home </span>
                     </Link>
                 </div>
-                <div className={styles.right_side}>
+                <div className={styles.side}>
                     {
                         navItemsRight.map((item, index) => (
                             <Link key={index} href={item.url} className={pathname.includes(item.url) ? styles.active : ''}>
