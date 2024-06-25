@@ -14,13 +14,10 @@ const Header: React.FC = () => {
                 <div className={styles.side}>
                     <Link href='/' className={styles.logo}>
                         <Image src={LogoImage} alt="logo" />
-                        <main>
-                            <h1> Portal <strong>IoT-TpM</strong> Unicamp <strong className={styles.abbreviate}>Comunidade IoT-TPM</strong> </h1>
-                            <h2>
-                                {/* Aiming to disseminate knowledge about the Internet of Things in a simple, practical and objective way */}
-                                Conteúdo sobre Internet das Coisas de forma simples, prática e objetiva
-                            </h2>
-                        </main>
+                        <div className={styles.title}>
+                            <h1> Portal <strong> IoT-TpM </strong> Unicamp </h1>
+                            <h2> Conteúdo sobre Internet das Coisas de forma simples, prática e objetiva </h2>
+                        </div>
                     </Link>
                 </div>
                 <div className={styles.side}>
