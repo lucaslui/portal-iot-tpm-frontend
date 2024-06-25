@@ -102,40 +102,49 @@
 
             padding: 24px 8px;
 
-            form {
+            .content {
                 display: flex;
                 flex-direction: column;
                 justify-content: flex-start;
                 align-items: stretch;
 
-                gap: 12px;
+                gap: 16px;
 
-                input {
-                    padding: 8px;
+                form {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-start;
+                    align-items: stretch;
 
-                    height: 36px;
+                    gap: 12px;
 
-                    padding: 0 12px;
+                    input {
+                        padding: 8px;
 
-                    border-radius: 4px;
-                    border: none;
-                }
+                        height: 36px;
 
-                button {
-                    height: 36px;
-                    padding: 0 12px;
+                        padding: 0 12px;
 
-                    border-radius: 4px;
-                    border: none;
+                        border-radius: 4px;
+                        border: none;
+                    }
 
-                    background-color: $link-color;
-                    color: #fff;
+                    button {
+                        height: 36px;
+                        padding: 0 12px;
 
-                    cursor: pointer;
-                    
-                    &:hover {
-                        background-color: $focus-color;
+                        border-radius: 4px;
+                        border: none;
+
+                        background-color: $link-color;
                         color: #fff;
+
+                        cursor: pointer;
+
+                        &:hover {
+                            background-color: $focus-color;
+                            color: #fff;
+                        }
                     }
                 }
             }

@@ -46,11 +46,13 @@ const Footer: React.FC = () => {
                 </div>
                 <div className={styles.newsletter}>
                     <h2>Notícias</h2>
-                    <p>Assine para receber todas as publicações.</p>
-                    <form>
-                        <input type="email" placeholder="Entre com seu email" />
-                        <button type="submit">Assinar</button>
-                    </form>
+                    <div className={styles.content}>
+                        <p>Assine para receber todas as atualizações de novas publicações.</p>
+                        <form>
+                            <input type="email" placeholder="Entre com seu email" />
+                            <button type="submit">Assinar</button>
+                        </form>
+                    </div>
                 </div>
             </div>
             <div className={styles.bottom}>
