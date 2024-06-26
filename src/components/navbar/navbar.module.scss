@@ -4,8 +4,15 @@
 .navbar {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-end;
+    align-items: stretch;
+
+    align-self: center;
+    
+    margin-top: 28px;
+
+    width: 100%;
+    max-width: $site-content-width;
 
     .content {
         display: flex;
@@ -13,35 +20,45 @@
         justify-content: space-between;
         align-items: center;
 
-        width: $site-content-width + 120px;
-        
-        margin-top: 28px;
-
-        a {
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            align-items: center;
-
-            gap: 8px;
-
-            padding: 20px 20px 20px 20px;
-
-            min-width: 75px;
-        }
-
-        .active {
-            background-color: $background-secondary-color;
-
-            border-top-left-radius: 25px;
-            border-top-right-radius: 25px;
-        }
-
         .side {
             display: flex;
             flex-direction: row;
             justify-content: center;
             align-items: center;
+
+            a {
+                // display: flex;
+                // flex-direction: row;
+                // justify-content: center;
+                // align-items: center;
+
+                // gap: 8px;
+
+                // padding: 20px 20px 20px 20px;
+
+                // min-width: 75px;
+
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                gap: 8px;
+
+                color: $primary-color;
+                padding: 20px;
+
+                i {
+                    font-size: 1.2rem;
+                }
+
+                &.active {
+                    background-color: $background-secondary-color;
+
+                    border-top-left-radius: 25px;
+                    border-top-right-radius: 25px;
+                }
+            }
         }
     }
 }
@@ -60,25 +77,25 @@
         padding: 0 4px;
 
         .content {
-            a {
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-
-                color: $primary-color;
-                padding: 20px 8px 20px 8px;
-
-                i {
-                    font-size: 1.2rem;
-                }
-            }
-
             .side {
                 display: flex;
                 flex-direction: row;
                 justify-content: center;
                 align-items: center;
+
+                a {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+
+                    color: $primary-color;
+                    padding: 20px 8px 20px 8px;
+
+                    i {
+                        font-size: 1.2rem;
+                    }
+                }
             }
         }
     }
