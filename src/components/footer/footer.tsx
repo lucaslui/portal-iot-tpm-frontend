@@ -55,7 +55,7 @@ const Footer: React.FC = () => {
                 </div>
             </div>
             <div className={styles.bottom}>
-                <span>© {new Date().getFullYear()} Portal IoT-TpM Unicamp. Todos os direitos reservados. </span>
+                <span>Copyright © {new Date().getFullYear()} - Portal IoT-TpM Unicamp. Todos os direitos reservados. </span>
             </div>
         </footer >
     )
