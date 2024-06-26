@@ -12,13 +12,12 @@ const Footer: React.FC = () => {
                     <ul>
                         <li>
                             <Link href="/about">
-                                {/* <i className="fas fa-info-circle" /> */}
                                 Sobre nós
                             </Link>
                         </li>
-                        <li><Link href="#">Acesso de Autores</Link></li>
-                        <li><Link href="#">Serviços</Link></li>
-                        <li><Link href="#">Contato</Link></li>
+                        <li><Link href="https://portal-iot-tpm-frontend-cms.vercel.app/">Acesso de Autores</Link></li>
+                        <li><Link href="/services">Serviços</Link></li>
+                        <li><Link href="/contact">Contato</Link></li>
                     </ul>
                 </div>
                 <div className={styles.social}>

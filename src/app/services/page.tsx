@@ -9,9 +9,9 @@ const poppins = Poppins({
     weight: ['400', '500', '600', '700', '900'],
 })
 
-const AboutPage: React.FC = () => {
+const ServicesPage: React.FC = () => {
     return (
-        <div className={styles.about_page}>
+        <div className={styles.services_page}>
             <h1> Sobre o projeto </h1>
             <section className={`${poppins.className}`}>
                 <p>
@@ -47,4 +47,4 @@ const AboutPage: React.FC = () => {
     )
 }
 
-export default AboutPage
+export default ServicesPage

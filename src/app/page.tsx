@@ -15,7 +15,7 @@ const loadPosts = async (): Promise<ArticleViewModel[]> => {
     return data.articles
 }
 
-const ContronPanel: React.FC = async () => {
+const HomePage: React.FC = async () => {
 
     const articles = await loadPosts()
 
@@ -35,4 +35,4 @@ const ContronPanel: React.FC = async () => {
     )
 }
 
-export default ContronPanel
+export default HomePage
