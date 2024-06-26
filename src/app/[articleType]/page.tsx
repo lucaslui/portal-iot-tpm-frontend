@@ -9,7 +9,7 @@ type Props = {
     }
 }
 
-const Articles: React.FC<Props> = async ({ params }: { params: { articleType: string } }) => {
+const ArticlesByTypePage: React.FC<Props> = async ({ params }: { params: { articleType: string } }) => {
 
     const loadArticlePosts = async (): Promise<ArticleModel[]> => {
         const result = await fetch(`${process.env.API_URL}/api/articles?type=${params.articleType}`)
@@ -24,4 +24,4 @@ const Articles: React.FC<Props> = async ({ params }: { params: { articleType: st
     )
 }
 
-export default Articles
+export default ArticlesByTypePage
