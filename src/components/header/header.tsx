@@ -1,10 +1,17 @@
 import React from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
+import { Source_Code_Pro } from 'next/font/google'
 
 import styles from './header.module.scss'
 
 import LogoImage from '../../assets/imgs/logo.png'
+
+const source_code = Source_Code_Pro({
+    subsets: ['latin'],
+    style: ["normal", "italic"],
+    weight: ['400', '500', '600', '700', '800'],
+})
 
 const Header: React.FC = () => {
 
@@ -15,7 +22,7 @@ const Header: React.FC = () => {
                     <Link href='/' className={styles.logo}>
                         <Image src={LogoImage} alt="logo" />
                         <div className={styles.title}>
-                            <h1> Portal <strong> IoT-TpM </strong> Unicamp </h1>
+                            <h1> Portal <strong className={source_code.className}>IoT-TpM</strong> Unicamp </h1>
                             <h2> Conteúdo sobre Internet das Coisas de forma simples, prática e objetiva </h2>
                         </div>
                     </Link>

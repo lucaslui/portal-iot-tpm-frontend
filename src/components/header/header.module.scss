@@ -40,11 +40,13 @@
 
                 h1 {
                     font-size: 1.2rem;
-                    font-weight: 900;
+                    font-weight: 700;
 
                     color: $primary-color;
 
                     strong {
+                        font-size: 1.4rem;
+                        font-weight: 800;
                         color: transparent;
                         // text-shadow: 0 0 1rem $logo-color;
                         background: linear-gradient(to left,
