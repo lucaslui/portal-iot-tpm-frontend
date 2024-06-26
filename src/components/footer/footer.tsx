@@ -15,7 +15,7 @@ const Footer: React.FC = () => {
                                 Sobre nós
                             </Link>
                         </li>
-                        <li><Link href="https://portal-iot-tpm-frontend-cms.vercel.app/">Acesso de Autores</Link></li>
+                        <li><Link href="https://portal-iot-tpm-frontend-cms.vercel.app/" target={"_blank"}>Acesso de Autores</Link></li>
                         <li><Link href="/services">Serviços</Link></li>
                         <li><Link href="/contact">Contato</Link></li>
                     </ul>
