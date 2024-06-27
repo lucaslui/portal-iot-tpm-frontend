@@ -24,15 +24,15 @@ const Footer: React.FC = () => {
                     <h2>Siga-nos</h2>
                     <ul>
                         <li>
-                            <Link href="https://www.instagram.com/iotm3f/">
+                            <Link href="https://www.instagram.com/iot_tpm/">
                                 <i className="fa-brands fa-instagram" style={{ "paddingLeft": "2px" }}></i>
-                                <span>instagram.com/iotm3f</span>
+                                <span>instagram.com/iot_tpm</span>
                             </Link>
                         </li>
                         <li>
-                            <Link href="https://www.linkedin.com/in/professor-omar-branquinho/">
+                            <Link href="https://www.linkedin.com/company/iot-tpm-unicamp/">
                                 <i className="fa-brands fa-linkedin" style={{ "paddingLeft": "2px" }}></i>
-                                <span>in/professor-omar-branquinho</span>
+                                <span>company/iot-tpm-unicamp</span>
                             </Link>
                         </li>
                         <li>

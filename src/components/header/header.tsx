@@ -29,10 +29,10 @@ const Header: React.FC = () => {
                 </div>
                 <div className={styles.side}>
                     <div className={styles.social_list}>
-                        <Link href='https://www.instagram.com/iotm3f/' className={styles.item}>
+                        <Link href='https://www.instagram.com/iot_tpm/' className={styles.item}>
                             <i className="fa-brands fa-instagram"></i>
                         </Link>
-                        <Link href='https://www.linkedin.com/in/professor-omar-branquinho/'>
+                        <Link href='https://www.linkedin.com/company/iot-tpm-unicamp/'>
                             <i className="fa-brands fa-linkedin"></i>
                         </Link>
                         <Link href='https://www.youtube.com/@professoromarbranquinho1170'>
