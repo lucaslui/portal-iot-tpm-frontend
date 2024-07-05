@@ -2,7 +2,7 @@ import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 
-import styles from './post-card-flexible.module.scss'
+import styles from './article-home-card.module.scss'
 
 import articleI18N from '@/i18n/article'
 import { ArticleViewModel } from '@/model/article'
@@ -15,7 +15,7 @@ type Props = {
 
 const PostCardFlexible: React.FC<Props> = ({ article }: Props) => {
     return (
-        <Link key={article.id} className={styles.post_card_full} href={`/${article.type}/${article.id}`}>
+        <Link key={article.id} className={styles.article_home_card} href={`/${article.type}/${article.id}`}>
             <div className={styles.image_container}>
                 <Image
                     src={article.imageUrl}
