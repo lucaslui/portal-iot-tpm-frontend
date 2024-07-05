@@ -39,10 +39,10 @@ const HomePage: React.FC = async () => {
     return (
         <div className={styles.home}>
             <div className={styles.concepts}>
-                {/* <div className={styles.title}>
+                <div className={styles.title}>
                     <h3>Oferencimentos</h3>
-                    <Link href="/concepts">Ver todos</Link>
-                </div> */}
+                    {/* <Link href="/concepts">Ver todos</Link> */}
+                </div>
                 <div className={styles.feed}>
                     {
                         courses

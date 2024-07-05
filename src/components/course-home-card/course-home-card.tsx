@@ -1,4 +1,6 @@
-import React from 'react'
+'use client'
+
+import React, { useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 
@@ -13,6 +15,7 @@ type Props = {
 }
 
 const CourseHomeCard: React.FC<Props> = ({ course }: Props) => {
+    const [showDetails, setShowDetails] = useState<boolean>(false)
 
     const getMissingHoursCounter = () => {
         const today = new Date()
@@ -49,13 +52,17 @@ const CourseHomeCard: React.FC<Props> = ({ course }: Props) => {
                             Inscreva-se
                         </Link>
                     </div>
+                    <button className={styles.details} onClick={() => setShowDetails(d => !d)}>
+                        Mais detalhes
+                    </button>
                 </div>
             </div>
-            <div className={styles.text_container}>
-                <div className={styles.top}>
+            {
+                showDetails &&
+                <div className={styles.text_container}>
                     <p className={styles.description}>{course.description}</p>
                 </div>
-            </div>
+            }
         </div>
     )
 }
