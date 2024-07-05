@@ -13,6 +13,15 @@ type Props = {
 }
 
 const CourseHomeCard: React.FC<Props> = ({ course }: Props) => {
+
+    const getMissingHoursCounter = () => {
+        const today = new Date()
+        const endDate = new Date(course.registrationPeriod.endDate)
+        const diffTime = Math.abs(endDate.getTime() - today.getTime())
+        const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24))
+        return `${diffDays} dias restantes`
+    }
+
     return (
         <div key={course.id} className={styles.course_home_card}>
             <div className={styles.image_container}>
@@ -25,6 +34,7 @@ const CourseHomeCard: React.FC<Props> = ({ course }: Props) => {
                     priority
                     quality={80}
                 />
+                <span className={styles.missing_hours_counter}>{getMissingHoursCounter()}</span>
                 <div className={styles.text_overlay}>
                     <span className={styles.type}>{course.type}</span>
                     <h1 className={styles.title}>{course.title}</h1>
@@ -39,7 +49,6 @@ const CourseHomeCard: React.FC<Props> = ({ course }: Props) => {
                             Inscreva-se
                         </Link>
                     </div>
-
                 </div>
             </div>
             <div className={styles.text_container}>
