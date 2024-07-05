@@ -5,7 +5,8 @@ import styles from './page.module.scss'
 import { ArticleViewModel } from '@/model/article'
 import PostCardFlexible from '@/components/article-card-flexible/post-card-flexible'
 import Link from 'next/link'
-import NewsCardFlexible from '@/components/news-card-flexible/news-card-flexible'
+import CourseHomeCard from '@/components/course-home-card/course-home-card'
+import { CourseModel } from '@/model/course'
 
 const loadPosts = async (): Promise<ArticleViewModel[]> => {
     const result = await fetch(`${process.env.API_URL}/api/articles`, {
@@ -17,25 +18,37 @@ const loadPosts = async (): Promise<ArticleViewModel[]> => {
     return data.articles
 }
 
+const loadCourses = async (): Promise<CourseModel[]> => {
+    const result = await fetch(`${process.env.API_URL}/api/courses`, {
+        next: {
+            revalidate: 10
+        }
+    })
+    if (!result.ok) {
+        return []
+    }
+    const payload = await result.json()
+    return payload.data
+}
+
 const HomePage: React.FC = async () => {
 
     const articles = await loadPosts()
+    const courses = await loadCourses()
 
     return (
         <div className={styles.home}>
-            <div className={styles.news}>
-                <div className={styles.title}>
-                    <h3>Últimas Noticias</h3>
+            <div className={styles.concepts}>
+                {/* <div className={styles.title}>
+                    <h3>Oferencimentos</h3>
                     <Link href="/concepts">Ver todos</Link>
-                </div>
+                </div> */}
                 <div className={styles.feed}>
                     {
-                        articles
-                            .filter(article => article.type === 'news')
-                            .slice(0, 6)
-                            .map((article: ArticleViewModel) => {
+                        courses
+                            .map(course => {
                                 return (
-                                    <NewsCardFlexible key={article.id} article={article} />
+                                    <CourseHomeCard key={course.id} course={course} />
                                 )
                             })
                     }
@@ -51,7 +64,6 @@ const HomePage: React.FC = async () => {
                     {
                         articles
                             .filter(article => article.type === 'concepts')
-                            .slice(0, 6)
                             .map((article: ArticleViewModel) => {
                                 return (
                                     <PostCardFlexible key={article.id} article={article} />

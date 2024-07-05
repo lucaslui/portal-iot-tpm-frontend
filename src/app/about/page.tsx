@@ -24,11 +24,7 @@ const AboutPage: React.FC = () => {
                     <br /><br />
 
                     Os conteúdos encontrados no portal estão divididos por conceitos, tutoriais, projetos e notícias.
-
-                    {/* <br /><br />
-
-                    Para iniciar os estudos, recomendamos a leitura de <b>Introdução à Internet das Coisas</b>:
-                </p> */}
+                </p>
                 {/* <ul>
                     <li><a href="/concepts/65c41bac7750e3ea07c83e69">Parte I</a></li>
                     <li><a href="/concepts/65c641aee21e7ad9a8e43f7d">Parte II</a></li>

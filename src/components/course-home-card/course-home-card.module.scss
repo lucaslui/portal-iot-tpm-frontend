@@ -1,17 +1,15 @@
 @import '../../styles/colors.scss';
 @import '../../styles/spaces.scss';
 
-.news_card_full {
+.course_home_card {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+
     border-radius: 8px;
 
-    height: 480px;
-
-    h1 {
-        font-size: 1.2rem;
-        font-weight: 600;
-        margin-bottom: $outside-gap;
-        margin-left: 4px;
-    }
+    height: 500px;
 
     .image_container {
         display: flex;
@@ -21,37 +19,123 @@
 
         position: relative;
 
-        flex: 1 1 65%;
+        flex: 1 1 70%;
 
         img {
             object-fit: cover;
+            opacity: 0.3;
 
             border-top-left-radius: 8px;
-            border-bottom-left-radius: 8px;
+            border-top-right-radius: 8px;
         }
 
-        .embedded_title {
+        .text_overlay {
             position: absolute;
-            bottom: 0;
+            top: 24px;
             left: 0;
-            right: 0;
-            background-color: rgba(0, 0, 0, 0.5);
-            color: white;
-            padding: 16px 24px;
-            margin: 12px 0px 24px 0;
-        }
 
-        .embedded_type {
-            position: absolute;
-            top: 0;
-            right: 0;
-            background-color: rgba(16, 31, 173, 0.5);
-            color: white;
-            padding: 12px;
-            margin: 0;
-            border-bottom-left-radius: 8px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
 
-            text-transform: capitalize;
+            gap: 12px;
+
+            padding: 24px;
+
+            .type {
+                font-size: 1rem;
+                font-weight: 500;
+
+                color: white;
+                background-color: rgba(16, 136, 173, 0.747);
+
+                padding: 12px;
+
+                border-radius: 8px;
+
+                text-transform: capitalize;
+            }
+
+            .title {
+                font-size: 1.5rem;
+                font-weight: 600;
+
+                color: white;
+
+                padding: 12px;
+
+                text-transform: capitalize;
+            }
+
+            .observation {
+                font-size: 1rem;
+                font-weight: 500;
+
+                color: white;
+                background-color: rgba(16, 32, 173, 0.616);
+
+                padding: 12px;
+
+                border-radius: 8px;
+
+                text-transform: capitalize;
+            }
+
+            .footer {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                
+                align-self: stretch;
+
+                .period_date {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    align-items: flex-start;
+
+                    gap: 8px;
+
+                    font-size: 0.8rem;
+                    font-weight: 500;
+
+                    color: white;
+                    background-color: rgba(6, 100, 80, 0.644);
+
+                    padding: 12px;
+
+                    border-radius: 8px;
+                }
+
+                .link {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+
+                    color: white;
+                    background-color: $link-color;
+
+                    font-size: 0.8rem;
+                    font-weight: 500;
+
+                    margin: 0;
+                    padding: 12px;
+
+                    font-size: 0.8rem;
+                    font-weight: 500;
+
+                    border-radius: 8px;
+                }
+
+                .link:hover {
+                    background-color: $focus-color;
+                }
+            }
+
+
         }
     }
 
@@ -61,11 +145,11 @@
         justify-content: space-between;
         align-items: stretch;
 
-        flex: 1 1 35%;
+        flex: 1 1 30%;
 
         background-color: $background-color;
 
-        border-top-right-radius: 8px;
+        border-bottom-left-radius: 8px;
         border-bottom-right-radius: 8px;
 
         .top {
@@ -80,15 +164,14 @@
 
             padding: 16px;
 
-            p {
+            .description {
                 font-size: 0.9rem;
                 font-weight: 500;
-                margin-bottom: $outside-gap;
-                margin-left: 4px;
 
-                flex: 1;
+                margin: 0;
+                padding: 12px;
 
-                height: 36px;
+                border-radius: 8px;
 
                 overflow: hidden;
                 text-overflow: ellipsis;
@@ -112,13 +195,9 @@
             border-bottom-right-radius: 8px;
         }
     }
-
-    &:hover {
-        box-shadow: 0 0 8px 0 $ternary-color;
-    }
 }
 
-.news_card_full:nth-child(6n+1) {
+.post_card_full:nth-child(6n+1) {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
@@ -139,9 +218,9 @@
     }
 }
 
-.news_card_full:nth-child(6n+2),
-.news_card_full:nth-child(6n+3),
-.news_card_full:nth-child(6n+4) {
+.post_card_full:nth-child(6n+2),
+.post_card_full:nth-child(6n+3),
+.post_card_full:nth-child(6n+4) {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -179,8 +258,8 @@
     }
 }
 
-.news_card_full:nth-child(6n+5),
-.news_card_full:nth-child(6n+6) {
+.post_card_full:nth-child(6n+5),
+.post_card_full:nth-child(6n+6) {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -222,21 +301,21 @@
 
 @media #{$media-query-tablet} {
 
-    .news_card_full:nth-child(6n+2),
-    .news_card_full:nth-child(6n+3),
-    .news_card_full:nth-child(6n+4) {
+    .post_card_full:nth-child(6n+2),
+    .post_card_full:nth-child(6n+3),
+    .post_card_full:nth-child(6n+4) {
         flex-basis: calc(50% - 16px);
     }
 }
 
 @media #{$media-query-mobile} {
 
-    .news_card_full:nth-child(6n+1),
-    .news_card_full:nth-child(6n+2),
-    .news_card_full:nth-child(6n+3),
-    .news_card_full:nth-child(6n+4),
-    .news_card_full:nth-child(6n+5),
-    .news_card_full:nth-child(6n+6) {
+    .post_card_full:nth-child(6n+1),
+    .post_card_full:nth-child(6n+2),
+    .post_card_full:nth-child(6n+3),
+    .post_card_full:nth-child(6n+4),
+    .post_card_full:nth-child(6n+5),
+    .post_card_full:nth-child(6n+6) {
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
