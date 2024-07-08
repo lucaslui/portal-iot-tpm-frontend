@@ -12,7 +12,7 @@ type Props = {
 const ArticlesByTypePage: React.FC<Props> = async ({ params }: { params: { articleType: string } }) => {
 
     const loadArticlePosts = async (): Promise<ArticleModel[]> => {
-        const result = await fetch(`${process.env.API_URL}/api/articles?type=${params.articleType}`)
+        const result = await fetch(`${process.env.API_URL}/api/portal/articles?type=${params.articleType}`)
         const data = await result.json()
         return data.articles
     }
