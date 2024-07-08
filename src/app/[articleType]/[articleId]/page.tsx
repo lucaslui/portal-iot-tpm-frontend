@@ -22,7 +22,7 @@ type Props = {
 }
 
 export async function generateStaticParams({ params }: any): Promise<{ articleId: string }[]> {
-    const response = await fetch(`${process.env.API_URL}/api/articles`)
+    const response = await fetch(`${process.env.API_URL}/api/portal/articles`)
     const data = await response.json()
     return data.articles
         .filter((article: ArticleModel) => article.type === params.articleType)
