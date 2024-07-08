@@ -58,7 +58,7 @@ const HomePage: React.FC = async () => {
             <div className={styles.concepts}>
                 <div className={styles.title}>
                     <h3>Últimos Artigos</h3>
-                    <Link href="/concepts">Ver todos</Link>
+                    {/* <Link href="/concepts">Ver todos</Link> */}
                 </div>
                 <div className={styles.feed}>
                     {
