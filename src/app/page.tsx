@@ -62,7 +62,6 @@ const HomePage: React.FC = async () => {
                 <div className={styles.feed}>
                     {
                         articles
-                            .filter(article => article.type === 'concepts')
                             .map((article: ArticleViewModel) => {
                                 return (
                                     <PostCardFlexible key={article.id} article={article} />
