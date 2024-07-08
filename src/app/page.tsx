@@ -4,7 +4,6 @@ import styles from './page.module.scss'
 
 import { ArticleViewModel } from '@/model/article'
 import PostCardFlexible from '@/components/article-home-card/article-home-card'
-import Link from 'next/link'
 import CourseHomeCard from '@/components/course-home-card/course-home-card'
 import { CourseModel } from '@/model/course'
 
