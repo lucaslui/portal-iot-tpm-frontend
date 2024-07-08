@@ -9,7 +9,7 @@ import CourseHomeCard from '@/components/course-home-card/course-home-card'
 import { CourseModel } from '@/model/course'
 
 const loadPosts = async (): Promise<ArticleViewModel[]> => {
-    const result = await fetch(`${process.env.API_URL}/api/articles`, {
+    const result = await fetch(`${process.env.API_URL}/api/portal/articles`, {
         next: {
             revalidate: 10
         }
@@ -19,7 +19,7 @@ const loadPosts = async (): Promise<ArticleViewModel[]> => {
 }
 
 const loadCourses = async (): Promise<CourseModel[]> => {
-    const result = await fetch(`${process.env.API_URL}/api/courses`, {
+    const result = await fetch(`${process.env.API_URL}/api/portal/courses`, {
         next: {
             revalidate: 10
         }
