@@ -36,9 +36,9 @@ const Footer: React.FC = () => {
                             </Link>
                         </li>
                         <li>
-                            <Link href="https://www.youtube.com/@professoromarbranquinho1170">
+                            <Link href="https://www.youtube.com/@iot-tpm-unicamp">
                                 <i className="fa-brands fa-youtube"></i>
-                                <span>@professoromarbranquinho1170</span>
+                                <span>@iot-tpm-unicamp</span>
                             </Link>
                         </li>
                     </ul>

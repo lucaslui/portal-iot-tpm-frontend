@@ -35,7 +35,7 @@ const Header: React.FC = () => {
                         <Link href='https://www.linkedin.com/company/iot-tpm-unicamp/'>
                             <i className="fa-brands fa-linkedin"></i>
                         </Link>
-                        <Link href='https://www.youtube.com/@professoromarbranquinho1170'>
+                        <Link href='https://www.youtube.com/@iot-tpm-unicamp'>
                             <i className="fa-brands fa-youtube"></i>
                         </Link>
                     </div>
