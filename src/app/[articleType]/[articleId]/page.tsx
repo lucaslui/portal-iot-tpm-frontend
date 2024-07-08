@@ -36,7 +36,7 @@ const poppins = Poppins({
 })
 
 const loadArticleById = async (articleId: string): Promise<ArticleViewModel> => {
-    const response = await fetch(`${process.env.API_URL}/api/articles/${articleId}`, {
+    const response = await fetch(`${process.env.API_URL}/api/portal/articles/${articleId}`, {
         next: {
             revalidate: 10
         }
