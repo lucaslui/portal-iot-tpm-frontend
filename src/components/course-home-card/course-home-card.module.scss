@@ -22,14 +22,31 @@
 
         flex: 1 1 80%;
 
-        height: 380px;
+        height: 520px;
 
-        img {
+        background: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.65) 100%);
+        /* FF3.6+ */
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0, 0, 0, 0.65)), color-stop(100%, rgba(0, 0, 0, 0)));
+        /* Chrome,Safari4+ */
+        background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.65) 100%);
+        /* Chrome10+,Safari5.1+ */
+        background: -o-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.65) 100%);
+        /* Opera 11.10+ */
+        background: -ms-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.65) 100%);
+        /* IE10+ */
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.65) 100%);
+        /* W3C */
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#a6000000', endColorstr='#00000000', GradientType=0);
+        /* IE6-9 */
+
+        .background_img {
             object-fit: cover;
             opacity: 0.3;
 
             border-top-left-radius: 8px;
             border-top-right-radius: 8px;
+
+            background: linear-gradient(to right, #2d333b, #22272e);
         }
 
         .missing_hours_counter {
@@ -54,7 +71,7 @@
 
         .text_overlay {
             position: absolute;
-            top: 24px;
+            top: 8px;
             left: 0;
 
             display: flex;
@@ -65,18 +82,27 @@
             padding: 24px;
 
             .type {
-                font-size: 1rem;
-                font-weight: 500;
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-start;
+                align-items: center;
+
+                gap: 8px;
 
                 color: white;
-                background-color: rgba(16, 136, 173, 0.747);
+                background-color: rgba(16, 136, 173, 0.651);
+
+                border-radius: 8px;
 
                 margin-top: 12px;
                 padding: 12px;
 
-                border-radius: 8px;
+                .type_text {
+                    font-size: 1rem;
+                    font-weight: 500;
 
-                text-transform: capitalize;
+                    text-transform: capitalize;
+                }
             }
 
             .title {
@@ -87,8 +113,84 @@
 
                 margin-top: 12px;
                 padding: 12px;
+            }
 
-                text-transform: capitalize;
+            .price {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+
+                gap: 24px;
+
+                color: white;
+                background-color: #1e2c3fc7;
+
+                margin-top: 12px;
+                padding: 24px;
+
+                border-radius: 8px;
+
+                .left {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-start;
+                    align-items: flex-start;
+
+                    font-size: 0.8rem;
+                    font-weight: 500;
+
+                    margin: 0;
+
+                    font-size: 0.8rem;
+                    font-weight: 500;
+
+                    border-radius: 8px;
+
+                    .price_info {
+                        font-size: 0.8rem;
+                        font-weight: 500;
+                    }
+
+                    .price_normal {
+                        font-size: 0.8rem;
+                        font-weight: 500;
+
+                        text-decoration: line-through;
+                    }
+
+                    .price_discount {
+                        font-size: 1.2rem;
+                        font-weight: 600;
+
+                        color: rgba(173, 16, 16, 0.829);
+                    }
+                }
+
+                .link {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+
+                    color: white;
+                    background-color: $link-color;
+
+                    font-size: 0.8rem;
+                    font-weight: 500;
+
+                    margin: 0;
+                    padding: 12px 24px;
+
+                    font-size: 0.8rem;
+                    font-weight: 500;
+
+                    border-radius: 8px;
+
+                    &:hover {
+                        background-color: $focus-color;
+                    }
+                }
             }
 
             .observation {
@@ -102,8 +204,15 @@
                 padding: 12px;
 
                 border-radius: 8px;
+            }
 
-                text-transform: capitalize;
+            .observation2 {
+                font-size: 0.7rem;
+                font-weight: 400;
+
+                color: white;
+
+                padding: 12px 24px 12px 12px;
             }
 
             .details {
@@ -112,18 +221,20 @@
                 justify-content: flex-end;
                 align-items: center;
 
-                align-self: stretch;
+                align-self: flex-end;
 
                 color: white;
                 background-color: transparent;
                 text-decoration: underline;
+
+                width: 180px;
 
                 cursor: pointer;
 
                 font-size: 0.8rem;
                 font-weight: 500;
 
-                padding: 12px 24px;
+                padding: 0 24px 12px 24px;
 
                 border-radius: 8px;
             }
@@ -160,34 +271,7 @@
 
                     border-radius: 8px;
                 }
-
-                .link {
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: center;
-                    align-items: center;
-
-                    color: white;
-                    background-color: $link-color;
-
-                    font-size: 0.8rem;
-                    font-weight: 500;
-
-                    margin: 0;
-                    padding: 12px 24px;
-
-                    font-size: 0.8rem;
-                    font-weight: 500;
-
-                    border-radius: 8px;
-                }
-
-                .link:hover {
-                    background-color: $focus-color;
-                }
             }
-
-
         }
     }
 
