@@ -28,7 +28,7 @@ const CourseHomeCard: React.FC<Props> = ({ course }: Props) => {
 
     return (
         <div key={course.id} className={styles.course_home_card}>
-            <div className={styles.image_container}>
+            <div className={styles.container}>
                 <Image
                     className={styles.background_img}
                     src={course.imageUrl}
@@ -45,7 +45,6 @@ const CourseHomeCard: React.FC<Props> = ({ course }: Props) => {
                         <Image
                             src={UnicampLogo}
                             alt='Logo da Unicamp'
-                            className={styles.type_logo}
                             width={24}
                         />
                         <span className={styles.type_text}>{course.type}</span>

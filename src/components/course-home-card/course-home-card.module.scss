@@ -10,9 +10,7 @@
 
     flex: 1;
 
-    border-radius: 8px;
-
-    .image_container {
+    .container {
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
@@ -23,7 +21,7 @@
         flex: 1 1 80%;
 
         height: 528px;
-
+        
         background: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.65) 100%);
         /* FF3.6+ */
         background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0, 0, 0, 0.65)), color-stop(100%, rgba(0, 0, 0, 0)));
@@ -40,13 +38,10 @@
         /* IE6-9 */
 
         .background_img {
-            object-fit: cover;
             opacity: 0.3;
 
             border-top-left-radius: 8px;
             border-top-right-radius: 8px;
-
-            background: linear-gradient(to right, #2d333b, #22272e);
         }
 
         .missing_hours_counter {
@@ -80,6 +75,8 @@
             align-items: flex-start;
 
             padding: 24px;
+
+            width: 100%;
 
             .type {
                 display: flex;
@@ -334,6 +331,121 @@
             text-overflow: ellipsis;
             display: -webkit-box;
             -webkit-box-orient: vertical;
+        }
+    }
+}
+
+@media #{$media-query-mobile} {
+    .course_home_card {
+        .container {
+
+            height: 620px;
+
+            .missing_hours_counter {
+                font-size: 0.7rem;
+            }
+
+            .text_overlay {
+                padding: 12px;
+
+                .type {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: flex-start;
+                    align-items: center;
+    
+                    gap: 8px;
+    
+                    color: white;
+                    background-color: rgba(16, 136, 173, 0.651);
+    
+                    border-radius: 8px;
+    
+                    margin-top: 24px;
+                    padding: 12px;
+    
+                    .type_text {
+                        font-size: 0.6rem;
+                        font-weight: 500;
+    
+                        text-transform: capitalize;
+                    }
+                }
+
+                .title {
+                    font-size: 1rem;
+
+                    margin-top: 0;
+                }
+
+                .price {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-start;
+                    align-items: stretch;
+
+                    margin-top: 0;
+                    padding: 16px;
+
+                    gap: 12px;
+
+                    .left {
+                        .price_info {
+                            font-size: 0.7rem;
+                        }
+
+                        .price_normal {
+                            font-size: 0.7rem;
+                        }
+
+                        .price_discount {
+                            font-size: 1rem;
+                        }
+                    }
+
+                    .link {
+                        font-size: 0.7rem;
+                    }
+                }
+
+                .observation {
+                    font-size: 0.6rem;
+
+                    margin-top: 0;
+                }
+
+                .observation2 {
+                    font-size: 0.6rem;
+
+                    margin-top: 0;
+                }
+
+                .footer {
+                    .period_date {
+                        font-size: 0.6rem;
+                    }
+                }
+
+                .subfooter {
+                    strong {
+                        font-size: 0.8rem;
+                    }
+
+                    .contact {
+                        font-size: 0.6rem;
+                    }
+
+                    .details {
+                        font-size: 0.7rem;
+                    }
+                }
+            }
+        }
+
+        .text_container {
+            .description {
+                font-size: 0.7rem;
+            }
         }
     }
 }
