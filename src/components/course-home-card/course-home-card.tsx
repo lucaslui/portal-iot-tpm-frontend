@@ -68,7 +68,7 @@ const CourseHomeCard: React.FC<Props> = ({ course }: Props) => {
                     <div className={styles.footer}>
                         <div className={styles.period_date}>
                             <span> Periodo de inscrição de <strong>{getShortDateFormat(course.registrationPeriod.startDate)} à {getShortDateFormat(course.registrationPeriod.endDate)}</strong> </span>
-                            <span> Período do curso de <strong>{course.classPeriod.startDate && course.classPeriod.endDate ? `${getShortDateFormat(course.classPeriod.startDate)} à ${getShortDateFormat(course.classPeriod.endDate)}` : `${getShortStringDateFormat(course.classPeriod.dates[0])} à ${getShortStringDateFormat(course.classPeriod.dates[course.classPeriod.dates.length - 1])}`}, {courseI18N.pt.classSchedules[course.classSchedules.weekDay]} das {course.classSchedules.startTime}h às {course.classSchedules.endTime}h</strong>
+                            <span> Período do curso de <strong>{course.classPeriod.startDate && course.classPeriod.endDate ? `${getShortDateFormat(course.classPeriod.startDate)} à ${getShortDateFormat(course.classPeriod.endDate)}` : `${getShortStringDateFormat(course.classPeriod.dates[0])} à ${getShortStringDateFormat(course.classPeriod.dates[course.classPeriod.dates.length - 1])}`}, {courseI18N.pt.classSchedules[course.classSchedules.weekDay]} das {course.classSchedules.startTime}h às {course.classSchedules.endTime}h e Quartas-feiras, das 19h às 22h</strong>
                             </span>
                         </div>
                     </div>
