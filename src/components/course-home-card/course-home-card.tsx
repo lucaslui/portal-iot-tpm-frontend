@@ -72,9 +72,12 @@ const CourseHomeCard: React.FC<Props> = ({ course }: Props) => {
                             </span>
                         </div>
                     </div>
-                    <span className={styles.details} onClick={() => setShowDetails(d => !d)}>
-                        Mais detalhes
-                    </span>
+                    <div className={styles.subfooter}>
+                        <span className={styles.contact}>Dúvidas entre em contato com <strong>iottpmunicamp@gmail.com</strong> ou celular <strong>(19) 99655-9844</strong></span>
+                        <span className={styles.details} onClick={() => setShowDetails(d => !d)}>
+                            Mais detalhes
+                        </span>
+                    </div>
                 </div>
             </div>
             {

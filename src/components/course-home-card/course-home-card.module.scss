@@ -215,34 +215,6 @@
                 padding: 12px 24px 12px 12px;
             }
 
-            .details {
-                display: flex;
-                flex-direction: row;
-                justify-content: flex-end;
-                align-items: center;
-
-                align-self: flex-end;
-
-                color: white;
-                background-color: transparent;
-                text-decoration: underline;
-
-                width: 180px;
-
-                cursor: pointer;
-
-                font-size: 0.8rem;
-                font-weight: 500;
-
-                padding: 12px 24px 12px 24px;
-
-                border-radius: 8px;
-            }
-
-            .details:hover {
-                color: $focus-color;
-            }
-
             .footer {
                 display: flex;
                 flex-direction: row;
@@ -271,6 +243,63 @@
 
                     border-radius: 8px;
                 }
+            }
+
+            .subfooter {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+
+                align-self: stretch;
+
+                strong {
+                    font-size: 0.9rem;
+                    font-weight: 600;
+                }
+                .contact {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: flex-start;
+                    align-items: center;
+
+                    gap: 8px;
+
+                    font-size: 0.7rem;
+                    font-weight: 500;
+
+                    padding: 8px;
+                }
+
+                .details {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: flex-end;
+                    align-items: center;
+    
+                    align-self: flex-end;
+    
+                    color: white;
+                    background-color: transparent;
+                    text-decoration: underline;
+    
+                    width: 180px;
+    
+                    cursor: pointer;
+    
+                    font-size: 0.8rem;
+                    font-weight: 500;
+    
+                    padding: 12px;
+    
+                    border-radius: 8px;
+
+                    &:hover {
+                        color: $focus-color;
+                    }
+                }
+    
+                
             }
         }
     }
