@@ -68,6 +68,12 @@
 
 @media #{$media-query-mobile} {
     .home {
+        .concepts {
+            .title {
+                font-size: 12px;
+            }
+        }
+
         .feed {
             padding: 0 24px;
         }
