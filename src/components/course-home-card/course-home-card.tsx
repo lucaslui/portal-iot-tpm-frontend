@@ -16,8 +16,6 @@ type Props = {
 }
 
 const CourseHomeCard: React.FC<Props> = ({ course }: Props) => {
-    const [showDetails, setShowDetails] = useState<boolean>(false)
-
     const getMissingHoursCounter = () => {
         const today = new Date()
         const endDate = new Date(course.registrationPeriod.endDate)
@@ -52,7 +50,7 @@ const CourseHomeCard: React.FC<Props> = ({ course }: Props) => {
                     <h1 className={styles.title}>{course.title}</h1>
                     <div className={styles.price}>
                         <div className={styles.left}>
-                            <span className={styles.price_info}>Até 20 de julho - Bolsa de 40%</span>
+                            <span className={styles.price_info}>Até 31 de julho - Bolsa de 40%</span>
                             <span className={styles.price_normal}>De 3x R$ 1200,00</span>
                             <span className={styles.price_discount}>para 3x R$ 720,00</span>
                         </div>
@@ -64,27 +62,14 @@ const CourseHomeCard: React.FC<Props> = ({ course }: Props) => {
                     </div>
                     <span className={styles.observation2}>*A bolsa será aplicada diretamente nos boletos de pagamento (tanto no formulário quanto no termo de compromisso a ser assinado constará o valor integral)</span>
                     <span className={styles.observation}>{course.observation}</span>
-                    <div className={styles.footer}>
-                        <div className={styles.period_date}>
-                            <span> Periodo de inscrição de <strong>{getShortDateFormat(course.registrationPeriod.startDate)} à {getShortDateFormat(course.registrationPeriod.endDate)}</strong> </span>
-                            <span> Período do curso de <strong>{course.classPeriod.startDate && course.classPeriod.endDate ? `${getShortDateFormat(course.classPeriod.startDate)} à ${getShortDateFormat(course.classPeriod.endDate)}` : `${getShortStringDateFormat(course.classPeriod.dates[0])} à ${getShortStringDateFormat(course.classPeriod.dates[course.classPeriod.dates.length - 1])}`}, {courseI18N.pt.classSchedules[course.classSchedules.weekDay]} das {course.classSchedules.startTime}h às {course.classSchedules.endTime}h e Quartas-feiras, das 19h às 22h</strong>
-                            </span>
-                        </div>
-                    </div>
-                    <div className={styles.subfooter}>
-                        <span className={styles.contact}>Dúvidas entre em contato com <strong>iottpmunicamp@gmail.com</strong> ou celular <strong>(19) 99655-9844</strong></span>
-                        <span className={styles.details} onClick={() => setShowDetails(d => !d)}>
-                            Mais detalhes
+                    <div className={styles.period_date}>
+                        <span> Periodo de inscrição de <strong>{getShortDateFormat(course.registrationPeriod.startDate)} à {getShortDateFormat(course.registrationPeriod.endDate)}</strong> </span>
+                        <span> Período do curso de <strong>{course.classPeriod.startDate && course.classPeriod.endDate ? `${getShortDateFormat(course.classPeriod.startDate)} à ${getShortDateFormat(course.classPeriod.endDate)}` : `${getShortStringDateFormat(course.classPeriod.dates[0])} à ${getShortStringDateFormat(course.classPeriod.dates[course.classPeriod.dates.length - 1])}`}, {courseI18N.pt.classSchedules[course.classSchedules.weekDay]} das {course.classSchedules.startTime}h às {course.classSchedules.endTime}h e Quartas-feiras, das 19h às 22h</strong>
                         </span>
                     </div>
+                    <span className={styles.contact}>Dúvidas entre em contato com <strong>iottpmunicamp@gmail.com</strong> ou celular <strong>(19) 99655-9844</strong></span>
                 </div>
             </div>
-            {
-                showDetails &&
-                <div className={styles.text_container}>
-                    <p className={styles.description}>{course.description}</p>
-                </div>
-            }
         </div>
     )
 }
