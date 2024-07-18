@@ -67,7 +67,7 @@ const CourseHomeCard: React.FC<Props> = ({ course }: Props) => {
                         <span> Período do curso de <strong>{course.classPeriod.startDate && course.classPeriod.endDate ? `${getShortDateFormat(course.classPeriod.startDate)} à ${getShortDateFormat(course.classPeriod.endDate)}` : `${getShortStringDateFormat(course.classPeriod.dates[0])} à ${getShortStringDateFormat(course.classPeriod.dates[course.classPeriod.dates.length - 1])}`}, {courseI18N.pt.classSchedules[course.classSchedules.weekDay]} das {course.classSchedules.startTime}h às {course.classSchedules.endTime}h e Quartas-feiras, das 19h às 22h</strong>
                         </span>
                     </div>
-                    <span className={styles.contact}>Dúvidas entre em contato com <strong>iottpmunicamp@gmail.com</strong> ou celular <strong>(19) 99655-9844</strong></span>
+                    <span className={styles.contact}>Dúvidas entre em contato por iottpmunicamp@gmail.com ou celular (19) 99655-9844</span>
                 </div>
             </div>
         </div>

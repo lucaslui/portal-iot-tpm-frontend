@@ -245,11 +245,6 @@
                 font-weight: 500;
 
                 padding: 8px;
-
-                strong {
-                    font-size: 0.9rem;
-                    font-weight: 600;
-                }
             }
         }
     }
@@ -292,10 +287,12 @@
     .course_home_card {
         .container {
 
-            height: 620px;
+            height: 610px;
 
             .missing_hours_counter {
                 font-size: 0.7rem;
+
+                padding: 10px;
             }
 
             .text_overlay {
@@ -315,7 +312,7 @@
                     border-radius: 8px;
 
                     margin-top: 24px;
-                    padding: 12px;
+                    padding: 10px;
 
                     .type_text {
                         font-size: 0.6rem;
