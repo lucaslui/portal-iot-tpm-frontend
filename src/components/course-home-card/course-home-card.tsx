@@ -50,7 +50,7 @@ const CourseHomeCard: React.FC<Props> = ({ course }: Props) => {
                     <h1 className={styles.title}>{course.title}</h1>
                     <div className={styles.price}>
                         <div className={styles.left}>
-                            <span className={styles.price_info}>Até 31 de julho - Bolsa de 40%</span>
+                            <span className={styles.price_info}>Até 10 de agosto - Bolsa de 40%</span>
                             <span className={styles.price_normal}>De 3x R$ 1200,00</span>
                             <span className={styles.price_discount}>para 3x R$ 720,00</span>
                         </div>
