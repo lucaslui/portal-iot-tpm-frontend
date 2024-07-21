@@ -60,7 +60,7 @@ const CourseHomeCard: React.FC<Props> = ({ course }: Props) => {
                             </Link>
                         </div>
                     </div>
-                    <span className={styles.observation2}>*A bolsa será aplicada diretamente nos boletos de pagamento (tanto no formulário quanto no termo de compromisso a ser assinado constará o valor integral)</span>
+                    <span className={styles.observation2}>*Importante: A bolsa será aplicada diretamente nos boletos de pagamento (tanto no formulário quanto no termo de compromisso a ser assinado constará o valor integral)</span>
                     <span className={styles.observation}>{course.observation}</span>
                     <div className={styles.period_date}>
                         <span> Periodo de inscrição de <strong>{getShortDateFormat(course.registrationPeriod.startDate)} à {getShortDateFormat(course.registrationPeriod.endDate)}</strong> </span>
