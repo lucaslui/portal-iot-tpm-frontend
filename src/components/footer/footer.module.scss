@@ -9,6 +9,8 @@
 
     background-color: $background-color;
 
+    padding: 24px;
+
     .top {
         display: flex;
         flex-direction: row;
@@ -18,8 +20,6 @@
         gap: 24px;
 
         max-width: $site-content-width;
-
-        padding: 24px;
 
         a {
             display: flex;
@@ -158,10 +158,6 @@
         justify-content: center;
         align-items: center;
 
-        padding: 24px 0px;
-
-        background-color: transparent;
-
         span {
             text-align: center;
             color: $secondary-color;
@@ -177,16 +173,14 @@
             justify-content: flex-start;
             align-items: flex-start;
 
-            .information {
-                padding: 12px 40px;
-            }
+            gap: 12px;
+        }
 
-            .social {
-                padding: 12px 40px;
-            }
+        .bottom {
+            padding: 12px;
 
-            .newsletter {
-                padding: 12px 40px;
+            span {
+                font-size: 0.8rem;
             }
         }
     }
