@@ -17,7 +17,7 @@ const roboto = Orbitron({
 })
 
 export const metadata: Metadata = {
-    title: 'Portal IoT TpM',
+    title: 'Portal: IoT-TpM Unicamp',
     description: 'Conteúdo sobre Internet das Coisas de forma simples, prática e objetiva',
     authors: [{ name: "Lucas Lui Motta", url: "https://github.com/lucaslui" }],
     keywords: 'Internet of Things, Blockchain, Artificial Inteligence'
