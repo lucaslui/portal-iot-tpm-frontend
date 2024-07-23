@@ -69,7 +69,7 @@ const ParticlesBackground: React.FC = () => {
                     "enable": false,
                     "speed": 40,
                     "size_min": 0.1,
-                    "sync": false
+                    "sync": true
                 }
             },
             "line_linked": {
