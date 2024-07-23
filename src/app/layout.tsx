@@ -33,9 +33,11 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
                 <link rel="icon" type="image/png" href="/favicon.png" />
             </head>
             <body className={roboto.className}>
-                <ParticlesBackground />
                 <Header />
-                <NavBar />
+                <div className={styles.space}>
+                    <ParticlesBackground />
+                    <NavBar />
+                </div>
                 <main className={styles.main}>
                     {children}
                 </main>

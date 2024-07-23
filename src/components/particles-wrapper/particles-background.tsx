@@ -2,8 +2,6 @@
 
 import React, { useCallback } from 'react';
 
-import './particles-background.css'
-
 import Particles from "react-tsparticles"
 import { loadSlim } from "tsparticles-slim";
 import { Engine, IOptions } from 'tsparticles-engine';
@@ -23,15 +21,15 @@ const ParticlesBackground: React.FC = () => {
 
     const particlesConfig: RecursivePartial<IOptions> = {
         "fullScreen": {
-            "enable": false,
-            "zIndex": 0,
+            "enable": true,
+            "zIndex": -1
         },
         "particles": {
             "number": {
-                "value": 90,
+                "value": 50,
                 "density": {
                     "enable": true,
-                    "value_area": 800
+                    "value_area": 1000
                 }
             },
             "color": {
