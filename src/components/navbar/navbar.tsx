@@ -38,7 +38,7 @@ const NavBar: React.FC = () => {
                 <div className={styles.side}>
                     <Link href='/' className={pathname === '/' ? styles.active : ''}>
                         <i className="fas fa-home" />
-                        <span> Home </span>
+                        <span> Início </span>
                     </Link>
                 </div>
                 <div className={styles.side}>
