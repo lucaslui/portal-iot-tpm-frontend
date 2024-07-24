@@ -191,7 +191,7 @@
             }
 
             .observation {
-                font-size: 1rem;
+                font-size: 0.9rem;
                 font-weight: 500;
 
                 color: white;
@@ -204,12 +204,16 @@
             }
 
             .observation2 {
-                font-size: 0.7rem;
+                font-size: 0.9rem;
                 font-weight: 400;
 
                 color: white;
 
-                padding: 12px 24px 12px 12px;
+                padding: 4px 24px 12px 12px;
+
+                strong {
+                    color: rgba(230, 11, 11, 0.829);
+                }
             }
 
             .period_date {

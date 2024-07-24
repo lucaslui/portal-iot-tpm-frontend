@@ -48,9 +48,9 @@ const CourseHomeCard: React.FC<Props> = ({ course }: Props) => {
                     <h1 className={styles.title}>{course.title}</h1>
                     <div className={styles.price}>
                         <div className={styles.left}>
-                            <span className={styles.price_info}>Até 10 de agosto - Bolsa de 40%</span>
+                            <span className={styles.price_info}>Até 09 de agosto - Bolsa de 40%</span>
                             <span className={styles.price_normal}>De 3x R$ 1200,00</span>
-                            <span className={styles.price_discount}>para 3x R$ 720,00</span>
+                            <span className={styles.price_discount}>para 3x R$ 720,00*</span>
                         </div>
                         <div className={styles.right}>
                             <Link className={styles.link} href={course.landingPageUrl} target='_blank'>
@@ -58,7 +58,7 @@ const CourseHomeCard: React.FC<Props> = ({ course }: Props) => {
                             </Link>
                         </div>
                     </div>
-                    <span className={styles.observation2}>*Importante: A bolsa será aplicada diretamente nos boletos de pagamento (tanto no formulário quanto no termo de compromisso a ser assinado constará o valor integral)</span>
+                    <span className={styles.observation2}><strong>*Importante</strong>: A bolsa será aplicada diretamente nos boletos de pagamento (tanto no formulário quanto no termo de compromisso a ser assinado constará o valor integral)</span>
                     <span className={styles.observation}>{course.observation}</span>
                     <div className={styles.period_date}>
                         <span> Periodo de inscrição de <strong>{getShortDateFormat(course.registrationPeriod.startDate)} à {getShortDateFormat(course.registrationPeriod.endDate)}</strong> </span>
