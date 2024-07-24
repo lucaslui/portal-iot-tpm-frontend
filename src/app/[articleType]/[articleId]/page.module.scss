@@ -18,7 +18,7 @@
         flex-direction: column;
         justify-content: flex-start;
         align-items: stretch;
-
+        
         height: 75vh;
 
         .top {
@@ -26,8 +26,6 @@
             flex-direction: row;
             justify-content: space-between;
             align-items: flex-start;
-
-            gap: 16px;
 
             margin-bottom: $outside-gap;
 
