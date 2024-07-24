@@ -34,17 +34,23 @@ const ArticleList: React.FC<Props> = (props: Props) => {
     return (
         <div className={styles.articles}>
             <FilterBar filters={filters} handleFilter={handleFilter} />
-            <div className={styles.articles_grid}>
-                {
-                    articles.map((article: any) => {
-                        return (
-                            <Link key={article.id} href={`/${props.articleType}/${article.id}`}>
-                                <ArticleCard article={article} />
-                            </Link>
-                        )
-                    })
-                }
-            </div>
+            {
+                articles.length > 0 ?
+                    <div className={styles.articles_grid}>
+                        {
+                            articles.map((article: any) => {
+                                return (
+                                    <Link key={article.id} href={`/${props.articleType}/${article.id}`}>
+                                        <ArticleCard article={article} />
+                                    </Link>
+                                )
+                            })
+                        }
+                    </div> :
+                    <div className={styles.empty}>
+                        <h3>Nenhum artigo encontrado</h3>
+                    </div>
+            }
         </div>
     )
 }

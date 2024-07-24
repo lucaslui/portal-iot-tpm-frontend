@@ -26,4 +26,19 @@
             color: $primary-color;
         }
     }
+
+    .empty {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        gap: 16px;
+
+        width: 100%;
+        height: 60vh;
+
+        border: 1px dashed #aaaaaa8e;
+        border-radius: 8px;
+    }
 }
