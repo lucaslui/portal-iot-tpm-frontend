@@ -7,11 +7,12 @@
     justify-content: flex-start;
     align-items: center;
 
-    margin: 0 2px 16px 2px;
+    // margin: 0 2px 16px 2px;
 
     font-size: 0.8rem;
 
     max-width: 100%;
+
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -109,8 +110,6 @@
 
 @media #{$media-query-mobile} {
     .breadcrumb {
-        margin: 12px 0;
-
         font-size: 0.6rem;
 
         li {

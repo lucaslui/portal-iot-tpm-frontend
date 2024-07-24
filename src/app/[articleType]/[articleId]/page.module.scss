@@ -7,7 +7,7 @@
     justify-content: flex-start;
     align-items: stretch;
 
-    gap: 36px;
+    gap: 24px;
 
     width: 100%;
     
@@ -82,7 +82,8 @@
     hr {
         border: 0;
         height: 1px;
-        background-image: linear-gradient(to right, rgba(240, 240, 240, 0), rgba(240, 240, 240, 0.75), rgba(240, 240, 240, 0));
+        // background-color: rgba(240, 240, 240, 0.288);
+        background-image: linear-gradient(to right, rgba(240, 240, 240, 0), rgba(240, 240, 240, 0.40), rgba(240, 240, 240, 0));
     }
 
     main {
