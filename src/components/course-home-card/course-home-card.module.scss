@@ -18,9 +18,7 @@
 
         position: relative;
 
-        flex: 1 1 80%;
-
-        height: 528px;
+        flex: 1;
 
         border-radius: 8px;
 
@@ -38,6 +36,10 @@
         /* W3C */
 
         .background_img {
+            position: absolute;
+
+            z-index: 1;
+
             opacity: 0.4;
             border-radius: 8px;
         }
@@ -60,21 +62,21 @@
 
             font-size: 0.9rem;
             font-weight: 600;
+
+            z-index: 2;
         }
 
         .text_overlay {
-            position: absolute;
-            top: 8px;
-            left: 0;
-
             display: flex;
             flex-direction: column;
             justify-content: flex-start;
             align-items: flex-start;
 
-            padding: 24px;
+            padding: 36px 36px 24px 36px;
 
             width: 100%;
+
+            z-index: 2;
 
             .type {
                 display: flex;
@@ -89,7 +91,6 @@
 
                 border-radius: 8px;
 
-                margin-top: 12px;
                 padding: 12px;
 
                 .type_text {
@@ -288,9 +289,6 @@
 @media #{$media-query-mobile} {
     .course_home_card {
         .container {
-
-            height: 548px;
-
             .missing_hours_counter {
                 font-size: 0.7rem;
 
