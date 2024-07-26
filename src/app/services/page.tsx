@@ -1,7 +1,10 @@
 import React from 'react'
+import Image from 'next/image'
 import { Poppins } from 'next/font/google'
 
 import styles from './page.module.scss'
+
+import TitleBackgroung from '../../assets/imgs/service-background.jpg'
 
 const poppins = Poppins({
     subsets: ['latin'],
@@ -12,7 +15,16 @@ const poppins = Poppins({
 const ServicesPage: React.FC = () => {
     return (
         <div className={`${poppins.className} ${styles.services_page}`}>
-            <h1> Serviços </h1>
+            <div className={styles.title_container}>
+                <Image
+                    src={TitleBackgroung}
+                    alt="title-background"
+                    className={styles.image}
+                    fill
+                    style={{ objectFit: 'cover' }}
+                />
+                <h1> Serviços </h1>
+            </div>
             <p>
                 A comunidade <strong>IoT-Tpm Unicamp</strong>, em comunhão com o laboratório do <strong>WissTek</strong>, oferece diversos serviços para a comunidade acadêmica e empresarial.
             </p>
