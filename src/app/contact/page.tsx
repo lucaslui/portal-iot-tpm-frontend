@@ -1,7 +1,10 @@
 import React from 'react'
+import Image from 'next/image'
 import { Poppins } from 'next/font/google'
 
 import styles from './page.module.scss'
+
+import TitleBackgroung from '../../assets/imgs/contact-background.jpg'
 
 const poppins = Poppins({
     subsets: ['latin'],
@@ -11,38 +14,41 @@ const poppins = Poppins({
 
 const ContactPage: React.FC = () => {
     return (
-        <div className={styles.contact_page}>
-            <h1> Sobre o projeto </h1>
-            <section className={`${poppins.className}`}>
-                <p>
-                    O principal objetivo do projeto é disseminar conhecimento sobre Internet das Coisas de forma simples, prática e objetiva.
-
-                    <br /><br />
-
-                    O projeto foi iniciado pelo desenvolvedor e entusiasta <a href="https://br.linkedin.com/in/lucas-lui-motta" target="_blank">Lucas Lui Motta</a>, que adora debater sobre o assunto e acredita no poder do ensino baseado em projetos.
-
-                    <br /><br />
-
-                    Os conteúdos encontrados na biblioteca estão divididos por conceitos, tutoriais, projetos e notícias.
-
-                    <br /><br />
-
-                    Para iniciar os estudos, recomendamos a leitura de <b>Introdução à Internet das Coisas</b>:
-                </p>
-                <ul>
-                    <li><a href="/concepts/65c41bac7750e3ea07c83e69">Parte I</a></li>
-                    <li><a href="/concepts/65c641aee21e7ad9a8e43f7d">Parte II</a></li>
-                    <li><a href="/concepts/65c641b3e21e7ad9a8e43f7e">Parte III</a></li>
-                    <li><a href="/concepts/65e0fdae7e49bb7e28d6b787">Parte IV</a></li>
-                    <li><a href="/concepts/65e0fdae7e49bb7e28d6b787">Parte V</a></li>
-                </ul>
-                {/* <p>
-                    Boa parte do conteúdo apresentado é fundamentado em minha opinião, a qual se baseia em experiências pessoais, além de referências devidamente citadas.
-                </p> */}
-            </section>
-            <h3>
-                Sinta-se à vontade para entrar em contato se tiver alguma dúvida ou sugestão.
-            </h3>
+        <div className={`${poppins.className} ${styles.contact_page}`}>
+            <div className={styles.title_container}>
+                <Image
+                    src={TitleBackgroung}
+                    alt="title-background"
+                    className={styles.image}
+                    fill
+                    style={{ objectFit: 'cover' }}
+                />
+                <h1> Contato </h1>
+            </div>
+            <p>
+                Entre em contato conosco para mais informações sobre nossos serviços, projetos e parcerias.
+            </p>
+            <div className={styles.container}>
+                <section>
+                    <i className="fas fa-envelope"></i>
+                    <span> <strong>Email:</strong> iottpmunicamp@gmail.com</span>
+                </section>
+                <section>
+                    <i className="fas fa-phone"></i>
+                    <span> <strong>Telefone:</strong> (19) 99655-9844</span>
+                </section>
+                <section>
+                    <i className="fas fa-map-marker-alt"></i>
+                    <span> <strong>Endereço:</strong> Av. Albert Einstein, 400, Cidade Universitária, Campinas, SP, Brasil</span>
+                </section>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14709.989078432536!2d-47.066406!3d-22.8210849!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c8c7672a66bf5d%3A0xe2ac1445ada25c91!2sFaculdade%20de%20Engenharia%20El%C3%A9trica%20e%20de%20Computa%C3%A7%C3%A3o%20da%20Universidade%20Estadual%20de%20Campinas%20-%20FEEC%2FUNICAMP!5e0!3m2!1spt-BR!2sbr!4v1722258535978!5m2!1spt-BR!2sbr"
+                    style={{ border: 0 }}
+                    allowFullScreen={false}
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
         </div>
     )
 }
