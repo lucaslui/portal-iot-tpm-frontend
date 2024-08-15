@@ -33,7 +33,12 @@ const loadCourses = async (): Promise<CourseModel[]> => {
 const HomePage: React.FC = async () => {
 
     const articles = await loadPosts()
-    const courses = await loadCourses()
+    let courses = await loadCourses()
+
+    // courses = courses.filter(
+    //     course => course.registrationPeriod.endDate
+    //         && new Date(course.registrationPeriod.endDate) > new Date()
+    // )
 
     return (
         <div className={styles.home}>

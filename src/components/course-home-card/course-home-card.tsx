@@ -17,8 +17,14 @@ const CourseHomeCard: React.FC<Props> = ({ course }: Props) => {
     const getMissingHoursCounter = () => {
         const today = new Date()
         const endDate = new Date(course.registrationPeriod.endDate)
-        const diffTime = Math.abs(endDate.getTime() - today.getTime())
-        const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24))
+
+        const diffTime = endDate.getTime() - today.getTime()
+
+        if (diffTime < 0) {
+            return 'Inscrições Encerradas'
+        }
+
+        const diffDays = Math.ceil(Math.abs(diffTime) / (1000 * 60 * 60 * 24))
         return `${diffDays} dias restante` + (diffDays > 1 ? 's' : '')
     }
 
